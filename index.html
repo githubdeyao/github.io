@@ -102,7 +102,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: 'Penulis'
     }
   };
 </script>
@@ -167,7 +167,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Beranda
           </a>
         </li>
       
@@ -177,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Arsip
           </a>
         </li>
       
@@ -231,7 +231,7 @@
               
                 
                 <a class="post-title-link" href="/2016/12/23/post/" itemprop="url">
-                  Untitled
+                  Tidak ada title
                 </a>
               
             
@@ -243,7 +243,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Diposting di</span>
             <time itemprop="dateCreated" datetime="2016-12-23T12:59:04+08:00" content="2016-12-23">
               2016-12-23
             </time>
@@ -337,7 +337,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Diposting di</span>
             <time itemprop="dateCreated" datetime="2016-12-02T14:29:42+08:00" content="2016-12-02">
               2016-12-02
             </time>
@@ -424,7 +424,8 @@
 </li>
 </ol>
 <p>4.接受<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">ajax.onreadystatechange = <span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    /**</div><div class="line">     * 0 未初始化，还没有调用open</div><div class="line">     * 1 载入，已经调用send方法，正在发送请求</div><div class="line">     * 2 载入完成，send已经完成，已接受到全部响应内容</div><div class="line">     * 3 解析，正在解析响应内容</div><div class="line">     * 4 完成，响应内容解析完成，可以在客户端调用了</div><div class="line">     */</div><div class="line">    <span class="keyword">if</span>(ajax.readyState == 4)&#123; //浏览器与服务器进行到哪一步 4表示整个过程已经完成</div><div class="line">        <span class="keyword">if</span>(ajax.status == 200)&#123;</div><div class="line">            fnS(ajax.readAsText);</div><div class="line">            //console.log(<span class="string">"成功了"</span>, ajax.readAsText);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">if</span>(fnF)&#123;</div><div class="line">                fnF(ajax.status);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
+<h3 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">window.onload与$(document).ready()的区别</div><div class="line">window.onload:y需要页面中DOM树、图片、视频、音频等资源加载完之后才运行Javascript</div><div class="line">$(document).ready():当DOM树加载完成后就可以运行Javascript</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获得内容：text()、html()</span></div><div class="line">$(<span class="string">".as"</span>).html(<span class="string">"jquery改变的html文本"</span>);</div><div class="line"><span class="comment">//获得value值</span></div><div class="line">$(<span class="string">"#ad"</span>).val(<span class="string">"获取value"</span>);</div><div class="line"><span class="comment">//获取属性：attr()</span></div><div class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   <span class="keyword">var</span> a =$(<span class="string">"#af"</span>).attr(<span class="string">"href"</span>);</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//添加新的 HTML 内容</span></div><div class="line"><span class="comment">/*append() - 在被选元素的结尾插入内容</span></div><div class="line">prepend() - 在被选元素的开头插入内容</div><div class="line">after() - 在被选元素之后插入内容</div><div class="line">before() - 在被选元素之前插入内容*/</div><div class="line">$(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#con p"</span>).append(<span class="string">"&lt;i&gt;新添加的文本;&lt;/i&gt;"</span>);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"#btn2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#con li"</span>).append(<span class="string">"&lt;li&gt;新添加的文本;&lt;/li&gt;"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//删除元素/内容</span></div><div class="line"><span class="comment">/*</span></div><div class="line">remove() - 删除被选元素（及其子元素）</div><div class="line">empty() - 从被选元素中删除子元素*/</div><div class="line">$(<span class="string">"#btn3"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#div1"</span>).empty();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//获取宽高</span></div><div class="line">$(<span class="string">"#div2"</span>).mouseover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a =$(<span class="string">"#div2"</span>).width();</div><div class="line">    <span class="keyword">var</span> b =$(<span class="string">"#div2"</span>).innerWidth();</div><div class="line">    $(<span class="string">"#div2"</span>).css(&#123;</div><div class="line">        <span class="string">"transition"</span>:<span class="string">"1s"</span>,</div><div class="line">        <span class="string">"transform"</span>:<span class="string">"scale(1.1)"</span></div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">    <span class="built_in">console</span>.log(b);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"#div2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n = $(<span class="string">"#div2"</span>).position().left;</div><div class="line">    <span class="built_in">console</span>.log(n);</div><div class="line">    $(<span class="string">"#div2"</span>).css(<span class="string">"left"</span>, n+<span class="number">5</span>+<span class="string">"px"</span>)</div><div class="line">&#125;,<span class="number">50</span>)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//jQuery 操作 CSSl</span></div><div class="line"><span class="comment">/*</span></div><div class="line">addClass() - 向被选元素添加一个或多个类</div><div class="line">removeClass() - 从被选元素删除一个或多个类</div><div class="line">toggleClass() - 对被选元素进行添加/删除类的切换操作</div><div class="line">css() - 设置或返回样式属性*/</div><div class="line"></div><div class="line"><span class="comment">//jquery 过滤</span></div><div class="line"><span class="comment">//first() last()</span></div><div class="line"><span class="comment">// 和 eq() filter() not()</span></div><div class="line">$(<span class="string">"#btn4"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#change p"</span>).eq(<span class="number">0</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"yellow"</span>,<span class="string">"font-size"</span>:<span class="string">"30px"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;);</div><div class="line">    $(<span class="string">"#change p"</span>).filter(<span class="string">".intro"</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"green"</span>,<span class="string">"font-size"</span>:<span class="string">"30px"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//遍历</span></div><div class="line"><span class="comment">//parent()上一级  parents()所有的上一级</span></div><div class="line"><span class="comment">// children()所有的下一级  find()指定的下一级</span></div><div class="line">$(<span class="string">".ancestors div"</span>).find(<span class="string">"li"</span>).css(&#123;<span class="string">"color"</span>:<span class="string">"red"</span>,<span class="string">"border"</span>:<span class="string">"2px solid red"</span>&#125;);</div><div class="line"><span class="comment">//同胞</span></div><div class="line"><span class="comment">//siblings()所有同胞元素  next()下一个元素(一个)  nextAll()后面的所有同胞</span></div><div class="line"><span class="comment">//prev()上一个元素（一个）  prevAll()前面的所有同胞</span></div><div class="line">$(<span class="string">"#div3 span"</span>).next().css(&#123;<span class="string">"color"</span>:<span class="string">"red"</span>,<span class="string">"border"</span>:<span class="string">"2px solid red"</span>&#125;);</div></pre></td></tr></table></figure>
           
         
       
@@ -494,7 +495,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">posting</span>
             </a>
           </div>
 
@@ -545,7 +546,7 @@
 </div>
 
 <div class="theme-info">
-  Theme -
+  Tema -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
