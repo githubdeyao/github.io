@@ -84,43 +84,43 @@
 
 
 
-<meta name="description" content="一、下载mysqlMySQL下载地址
-概念
+<meta name="description" content="概念
 RDBMS：Relational Database Manage System（关系数据库管理系统）
 DBMS ：Database Manage System（数据库管理系统）
 DB ：DATABASE（数据库）
 DBA ：Database Administrator（数据库管理员）
 
-导入SQL文件
+一、下载mysqlMySQL下载地址
+二、导入SQL文件
 登录mysql
-准备好sql文件，并记清SQL文件的">
+准备好sql文件，并记清SQL文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL笔记">
 <meta property="og:url" content="githubdeyao.github.io/2017/03/01/MySQL/index.html">
 <meta property="og:site_name" content="张德瑶">
-<meta property="og:description" content="一、下载mysqlMySQL下载地址
-概念
+<meta property="og:description" content="概念
 RDBMS：Relational Database Manage System（关系数据库管理系统）
 DBMS ：Database Manage System（数据库管理系统）
 DB ：DATABASE（数据库）
 DBA ：Database Administrator（数据库管理员）
 
-导入SQL文件
+一、下载mysqlMySQL下载地址
+二、导入SQL文件
 登录mysql
-准备好sql文件，并记清SQL文件的">
-<meta property="og:updated_time" content="2017-03-01T11:03:29.295Z">
+准备好sql文件，并记清SQL文">
+<meta property="og:updated_time" content="2017-03-03T10:22:26.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL笔记">
-<meta name="twitter:description" content="一、下载mysqlMySQL下载地址
-概念
+<meta name="twitter:description" content="概念
 RDBMS：Relational Database Manage System（关系数据库管理系统）
 DBMS ：Database Manage System（数据库管理系统）
 DB ：DATABASE（数据库）
 DBA ：Database Administrator（数据库管理员）
 
-导入SQL文件
+一、下载mysqlMySQL下载地址
+二、导入SQL文件
 登录mysql
-准备好sql文件，并记清SQL文件的">
+准备好sql文件，并记清SQL文">
 
 
 
@@ -196,7 +196,7 @@ DBA ：Database Administrator（数据库管理员）
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -206,7 +206,7 @@ DBA ：Database Administrator（数据库管理员）
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -269,7 +269,7 @@ DBA ：Database Administrator（数据库管理员）
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2017-03-01T16:23:14+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -298,33 +298,30 @@ DBA ：Database Administrator（数据库管理员）
       
 
       
-        <h2 id="一、下载mysql"><a href="#一、下载mysql" class="headerlink" title="一、下载mysql"></a>一、下载mysql</h2><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">MySQL下载地址</a></p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
 <li>RDBMS：Relational Database Manage System（关系数据库管理系统）</li>
 <li>DBMS ：Database Manage System（数据库管理系统）</li>
 <li>DB ：DATABASE（数据库）</li>
 <li>DBA ：Database Administrator（数据库管理员）</li>
 </ul>
-<h2 id="导入SQL文件"><a href="#导入SQL文件" class="headerlink" title="导入SQL文件"></a>导入SQL文件</h2><ul>
+<h2 id="一、下载mysql"><a href="#一、下载mysql" class="headerlink" title="一、下载mysql"></a>一、下载mysql</h2><p><a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">MySQL下载地址</a></p>
+<h2 id="二、导入SQL文件"><a href="#二、导入SQL文件" class="headerlink" title="二、导入SQL文件"></a>二、导入SQL文件</h2><ul>
 <li>登录mysql</li>
 <li>准备好sql文件，并记清SQL文件的地址</li>
 <li>导入sql文件</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source c:/world.sql</div></pre></td></tr></table></figure>
-<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><p>打开<code>mysql</code>的安装目录，复制一份<code>my-default.ini</code>,将其重命名为<code>my.ini</code>；</p>
+<h2 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h2><p>打开<code>mysql</code>的安装目录，复制一份<code>my-default.ini</code>,将其重命名为<code>my.ini</code>；</p>
 <p>打开<code>my.ini</code>文件，修改如以下内容：</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">basedir</span> = I:\webroot\mysql-<span class="number">5.7</span>.<span class="number">17</span></div><div class="line"><span class="attr">datadir</span> = I:\webroot\mysql-<span class="number">5.7</span>.<span class="number">17</span>\data</div><div class="line"><span class="attr">port</span> = <span class="number">3306</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">basedir = I:\webroot\mysql-5.7.17</div><div class="line">datadir = I:\webroot\mysql-5.7.17\data</div><div class="line">port = 3306</div></pre></td></tr></table></figure>
 <p>注意：上面的路径根据你的 <code>mysql</code>安装路径来决定。</p>
 <h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>在<code>path</code>中输入<code>mysql</code>安装的目录文件中bin路径（以分号；隔开）。</p>
-<p>安装mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqld -install</div></pre></td></tr></table></figure>
-<p>打开mysql</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net start mysql</div></pre></td></tr></table></figure>
-<p>关闭mysql</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net stop mysql</div></pre></td></tr></table></figure>
-<h2 id="登录与退出"><a href="#登录与退出" class="headerlink" title="登录与退出"></a>登录与退出</h2><h3 id="登录mysql"><a href="#登录mysql" class="headerlink" title="登录mysql"></a>登录mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div></pre></td></tr></table></figure>
+<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqld -install</div></pre></td></tr></table></figure>
+<h3 id="打开mysql"><a href="#打开mysql" class="headerlink" title="打开mysql"></a>打开mysql</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net start mysql</div></pre></td></tr></table></figure>
+<h3 id="关闭mysql"><a href="#关闭mysql" class="headerlink" title="关闭mysql"></a>关闭mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net stop mysql</div></pre></td></tr></table></figure>
+<h2 id="四、登录与退出"><a href="#四、登录与退出" class="headerlink" title="四、登录与退出"></a>四、登录与退出</h2><h3 id="登录mysql"><a href="#登录mysql" class="headerlink" title="登录mysql"></a>登录mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div></pre></td></tr></table></figure>
 <h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">exit</div><div class="line">\q</div><div class="line">quit</div></pre></td></tr></table></figure>
-<h2 id="数据库相关的操作"><a href="#数据库相关的操作" class="headerlink" title="数据库相关的操作"></a>数据库相关的操作</h2><p>查看数据库</p>
+<h2 id="数据库相关的操作"><a href="#数据库相关的操作" class="headerlink" title="数据库相关的操作"></a>数据库相关的操作</h2><h3 id="数据库语法（语法）"><a href="#数据库语法（语法）" class="headerlink" title="数据库语法（语法）"></a>数据库语法（语法）</h3><p>查看数据库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show databases;</div></pre></td></tr></table></figure>
 <p>创建一个数据库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create database  db_name;</div></pre></td></tr></table></figure>
@@ -332,7 +329,7 @@ DBA ：Database Administrator（数据库管理员）
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drop database bd_name;</div></pre></td></tr></table></figure>
 <p>使用数据库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">use db_name;</div></pre></td></tr></table></figure>
-<h2 id="数据表的相关操作"><a href="#数据表的相关操作" class="headerlink" title="数据表的相关操作"></a>数据表的相关操作</h2><p>创建表</p>
+<h3 id="数据表的相关操作（语法）"><a href="#数据表的相关操作（语法）" class="headerlink" title="数据表的相关操作（语法）"></a>数据表的相关操作（语法）</h3><p>创建表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create table book_version(id int,name varchar(20));</div></pre></td></tr></table></figure>
 <p>查看表</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW TABLES;</div></pre></td></tr></table></figure>
@@ -369,7 +366,24 @@ DBA ：Database Administrator（数据库管理员）
 <p>删除主键<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` DROP PRIMARY KEY;</div></pre></td></tr></table></figure></p>
 <p>删除字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` DROP `age`;</div></pre></td></tr></table></figure></p>
 <p>修改一个字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` CHANGE `age` `ages` int(2);</div></pre></td></tr></table></figure></p>
-
+<h3 id="数据表中数据的相关操作（语法）"><a href="#数据表中数据的相关操作（语法）" class="headerlink" title="数据表中数据的相关操作（语法）"></a>数据表中数据的相关操作（语法）</h3><h4 id="增-alsert-into-、删-deiete-、改-uptate-、查-select"><a href="#增-alsert-into-、删-deiete-、改-uptate-、查-select" class="headerlink" title="增(alsert into)、删(deiete)、改(uptate)、查(select)"></a>增(alsert into)、删(deiete)、改(uptate)、查(select)</h4><p>INSERT INTO 语句（增加）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)</div><div class="line"></div><div class="line">举例：插入新的一行：</div><div class="line">INSERT INTO Persons VALUES (&apos;Gates&apos;, &apos;Bill&apos;, &apos;Xuanwumen 10&apos;, &apos;Beijing&apos;)</div></pre></td></tr></table></figure></p>
+<p>Update 语句（修改）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值</div><div class="line"></div><div class="line">举例：修改地址（address），并添加城市名称（city）：</div><div class="line">UPDATE Person SET Address = &apos;Zhongshan 23&apos;, City = &apos;Nanjing&apos;</div><div class="line">WHERE LastName = &apos;Wilson&apos;</div></pre></td></tr></table></figure></p>
+<p>DELETE 语句（删除）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DELETE FROM 表名称 WHERE 列名称 = 值</div><div class="line"></div><div class="line">举例：&quot;Wilson&quot; 会被删除：</div><div class="line">DELETE FROM Person WHERE LastName = &apos;Wilson&apos;</div></pre></td></tr></table></figure></p>
+<p>SELECT 语句（查询）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT 列名称 FROM 表名称</div><div class="line"></div><div class="line">举例：获取名为 &quot;LastName&quot; 和 &quot;FirstName&quot; 的列的内容（从名为 &quot;Persons&quot; 的数据库表）：</div><div class="line">SELECT LastName,FirstName FROM Persons</div></pre></td></tr></table></figure></p>
+<p>DISTINCT 语句（不重复显示）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT 列名称 FROM 表名称</div><div class="line"></div><div class="line">举例：从 &quot;Company&quot; 列中选取Orders表所有的值</div><div class="line">SELECT DISTINCT Company FROM Orders</div></pre></td></tr></table></figure></p>
+<p>WHERE 语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT 列名称 FROM 表名称 WHERE 列 运算符 值</div><div class="line"></div><div class="line">举例：选取居住在城市 &quot;Beijing&quot; 中的人</div><div class="line">SELECT * FROM Persons WHERE City=&apos;Beijing&apos;</div></pre></td></tr></table></figure></p>
+<p>AND 和 OR 运算符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">举例：使用 AND 来显示所有姓为 &quot;Carter&quot; 并且名为 &quot;Thomas&quot; 的人：</div><div class="line">SELECT * FROM Persons WHERE FirstName=&apos;Thomas&apos; AND LastName=&apos;Carter&apos;</div></pre></td></tr></table></figure></p>
+<p>ORDER BY 语句（排序）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ORDER BY默认为升序ASC；降序加上：DESC</div><div class="line"></div><div class="line">举例：以字母顺序显示公司名称：</div><div class="line">SELECT Company FROM Orders ORDER BY Company</div></pre></td></tr></table></figure></p>
+<p>LIMIT 子句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">举例：2表示查询的位置，10表示条数</div><div class="line">SELECT * FROM `Orders` LIMIT 2, 10;</div></pre></td></tr></table></figure></p>
+<p>LIKE 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">LIKE 操作符用于在 WHERE 子句中搜索列。</div><div class="line"></div><div class="line">举例：从 &quot;Persons&quot; 表中选取居住在以 &quot;N&quot; 开始的城市里的人：</div><div class="line">SELECT * FROM Persons WHERE City LIKE &apos;N%&apos;</div></pre></td></tr></table></figure></p>
+<p>通配符（_、%、[ ]）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">通配符必须与 LIKE 运算符一起使用</div><div class="line"></div><div class="line">举例1：从 &quot;Persons&quot; 表中选取的这条记录的姓氏以 &quot;C&quot; 开头，然后是一个任意字符，然后是 &quot;r&quot;，</div><div class="line">然后是任意字符，然后是 &quot;er&quot;：</div><div class="line">SELECT * FROM Persons WHERE LastName LIKE &apos;C_r_er&apos;</div><div class="line"></div><div class="line">举例2：从上面的 &quot;Persons&quot; 表中选取居住的城市以 &quot;A&quot; 或 &quot;L&quot; 或 &quot;N&quot; 开头的人：</div><div class="line">SELECT * FROM Persons WHERE City LIKE &apos;[ALN]%&apos;</div></pre></td></tr></table></figure></p>
+<p>IN 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">IN 操作符可在 WHERE 子句中规定多个值。</div><div class="line"></div><div class="line">举例：从Persons表中选取姓氏为 Adams 和 Carter 的人：</div><div class="line">SELECT * FROM Persons WHERE LastName IN (&apos;Adams&apos;,&apos;Carter&apos;)</div></pre></td></tr></table></figure></p>
+<p>BETWEEN 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">BETWEEN ... AND 会选取两个值之间的数据范围。这些值可以是数值、文本或者日期。</div><div class="line">显示范围之外的可在BETWEEN前加用NOT 。</div><div class="line"></div><div class="line">举例：从Persons表中显示LastName列的 &quot;Adams&quot;（包括）和 &quot;Carter&quot;（不包括）之间的人：</div><div class="line">SELECT * FROM Persons WHERE LastName BETWEEN &apos;Adams&apos; AND &apos;Carter&apos;</div></pre></td></tr></table></figure></p>
+<p>AS(别名) 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">为列名称和表名称指定别名（Alias）。</div><div class="line"></div><div class="line">举例：从Persons表中将LastName，FirstName分别改名为Family，Name</div><div class="line">SELECT LastName AS Family, FirstName AS Name FROM Persons</div></pre></td></tr></table></figure></p>
+<p>UNION 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">UNION 可以合并两个或多个 SELECT 语句的结果集。</div><div class="line"></div><div class="line">举例：列出所有在中国和美国的不同的雇员名：</div><div class="line">SELECT E_Name FROM Employees_China</div><div class="line">UNION</div><div class="line">SELECT E_Name FROM Employees_USA</div><div class="line"></div><div class="line">注：列出在中国和美国的所有的雇员可用 UNION ALL：</div></pre></td></tr></table></figure></p>
+<h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">名称				范围								参数的意义</div><div class="line">char(n)				长度固定，最多可有255字符			n表示字符的个数</div><div class="line">varchar(n)			长度可变，最多可有65535个字符		~~</div><div class="line">tinytext			长度可变，最多可有255个字符</div><div class="line">text				长度可变，最多可有65535个字符</div><div class="line">mediumtext			长度可变，最多可有2^24 - 1个字符</div><div class="line">longtext			长度可变，最多可有2^32 - 1个字符</div></pre></td></tr></table></figure>
+<h3 id="单位换算："><a href="#单位换算：" class="headerlink" title="单位换算："></a>单位换算：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">一个英文字母(不分大小写)占一个字节的空间;一个中文汉字占两个字节的空间,标点符号也一样。</div><div class="line">计算机中的CPU位数指的是CPU一次能处理的最大位数。例如32位计算机的CPU一次最多能处理</div><div class="line">32位数据</div><div class="line">1字节(Byte） = 8位(bit)</div><div class="line">1KB = 1024 Byte</div><div class="line">1M = 1024 KB</div><div class="line">1G = 1024 M</div><div class="line">1T = 1024 G</div><div class="line">1P = 1024 T</div></pre></td></tr></table></figure>
+<h3 id="日期时间类型"><a href="#日期时间类型" class="headerlink" title="日期时间类型"></a>日期时间类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">date       日期</div><div class="line">datetime   日期时间</div><div class="line">time       时间</div><div class="line">timestamp  自动储存记录修改时间（最后修改时间）</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -452,10 +466,10 @@ DBA ：Database Administrator（数据库管理员）
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -472,7 +486,7 @@ DBA ：Database Administrator（数据库管理员）
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">8</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -503,7 +517,7 @@ DBA ：Database Administrator（数据库管理员）
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、下载mysql"><span class="nav-number">1.</span> <span class="nav-text">一、下载mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">2.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导入SQL文件"><span class="nav-number">3.</span> <span class="nav-text">导入SQL文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、安装"><span class="nav-number">4.</span> <span class="nav-text">二、安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置环境变量"><span class="nav-number">4.1.</span> <span class="nav-text">配置环境变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录与退出"><span class="nav-number">5.</span> <span class="nav-text">登录与退出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录mysql"><span class="nav-number">5.1.</span> <span class="nav-text">登录mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出"><span class="nav-number">5.2.</span> <span class="nav-text">退出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库相关的操作"><span class="nav-number">6.</span> <span class="nav-text">数据库相关的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据表的相关操作"><span class="nav-number">7.</span> <span class="nav-text">数据表的相关操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一、下载mysql"><span class="nav-number">2.</span> <span class="nav-text">一、下载mysql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、导入SQL文件"><span class="nav-number">3.</span> <span class="nav-text">二、导入SQL文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、安装"><span class="nav-number">4.</span> <span class="nav-text">三、安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置环境变量"><span class="nav-number">4.1.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装mysql"><span class="nav-number">4.2.</span> <span class="nav-text">安装mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开mysql"><span class="nav-number">4.3.</span> <span class="nav-text">打开mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭mysql"><span class="nav-number">4.4.</span> <span class="nav-text">关闭mysql</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、登录与退出"><span class="nav-number">5.</span> <span class="nav-text">四、登录与退出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#登录mysql"><span class="nav-number">5.1.</span> <span class="nav-text">登录mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#退出"><span class="nav-number">5.2.</span> <span class="nav-text">退出</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库相关的操作"><span class="nav-number">6.</span> <span class="nav-text">数据库相关的操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库语法（语法）"><span class="nav-number">6.1.</span> <span class="nav-text">数据库语法（语法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据表的相关操作（语法）"><span class="nav-number">6.2.</span> <span class="nav-text">数据表的相关操作（语法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据表中数据的相关操作（语法）"><span class="nav-number">6.3.</span> <span class="nav-text">数据表中数据的相关操作（语法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#增-alsert-into-、删-deiete-、改-uptate-、查-select"><span class="nav-number">6.3.1.</span> <span class="nav-text">增(alsert into)、删(deiete)、改(uptate)、查(select)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型："><span class="nav-number">6.4.</span> <span class="nav-text">数据类型：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单位换算："><span class="nav-number">6.5.</span> <span class="nav-text">单位换算：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日期时间类型"><span class="nav-number">6.6.</span> <span class="nav-text">日期时间类型</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -530,7 +544,7 @@ DBA ：Database Administrator（数据库管理员）
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
