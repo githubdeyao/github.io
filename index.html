@@ -167,7 +167,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            主页
           </a>
         </li>
       
@@ -177,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            文档
           </a>
         </li>
       
@@ -187,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -231,7 +231,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/13/upload_file/" itemprop="url">
-                  Untitled
+                  在线文件操作
                 </a>
               
             
@@ -243,7 +243,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-13T15:12:25+08:00" content="2017-03-13">
               2017-03-13
             </time>
@@ -274,8 +274,7 @@
       
         
           
-            <hr>
-<h2 id="title-在线文件操作"><a href="#title-在线文件操作" class="headerlink" title="title:在线文件操作"></a>title:在线文件操作</h2><h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><p>上传文件的步骤:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 1.将文件夹上传到服务器的临时文件</div><div class="line"> * 一般通过input:file 来完成上传</div><div class="line"> * 临时文件夹的目录需要在php.ini文件中配置</div><div class="line"> * 将文件上传到临时文件夹中的文件 移动（复制） 到指定的目录</div><div class="line"> * 移动：move_uploaded_file($tmp_name,&quot;upload/&quot;.$name)</div><div class="line"> * 复制: copy($tmp_name,&quot;upload/&quot;.$name);</div><div class="line"> */</div></pre></td></tr></table></figure></p>
+            <h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><p>上传文件的步骤:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 1.将文件夹上传到服务器的临时文件</div><div class="line"> * 一般通过input:file 来完成上传</div><div class="line"> * 临时文件夹的目录需要在php.ini文件中配置</div><div class="line"> * 将文件上传到临时文件夹中的文件 移动（复制） 到指定的目录</div><div class="line"> * 移动：move_uploaded_file($tmp_name,&quot;upload/&quot;.$name)</div><div class="line"> * 复制: copy($tmp_name,&quot;upload/&quot;.$name);</div><div class="line"> */</div></pre></td></tr></table></figure></p>
 <p>在php.ini配置文件中的相关配置文件参数信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * file_uploads = On 支持HTTP上传</div><div class="line"> * upload_tmp_dir =&quot;I:/wamp/tmp&quot; 文件上传的临时目录</div><div class="line"> * upload_max_filesize = 2M  文件上传的最大值</div><div class="line"> * max_file_uploads = 20  运行一次上传的最大文件数</div><div class="line"> * post_max_size = 8M  POST方式发送数据的最大值</div><div class="line"> */</div></pre></td></tr></table></figure></p>
 <p>上传文件的错误号:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * 0  没有错误发生，文件上传成功</div><div class="line"> * 1  上传的文件超过了 php.ini 中 upload_max_filesize 选项限制的值</div><div class="line"> * 2  上传文件的大小超过了 HTML 表单中 MAX_FILE_SIZE 选项指定的值</div><div class="line"> * 3  文件只有部分被上传</div><div class="line"> * 4  没有文件被上传</div><div class="line"> * 6  找不到临时文件夹</div><div class="line"> * 7  文件写入失败</div><div class="line"> */</div></pre></td></tr></table></figure></p>
 <p>上传文件使用form表单的注意事项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.方法必须用：post</div><div class="line">2.必须加上：enctype=&quot;multipart/form-data&quot;</div></pre></td></tr></table></figure></p>
@@ -342,7 +341,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-10T11:51:35+08:00" content="2017-03-10">
               2017-03-10
             </time>
@@ -435,7 +434,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-07T16:48:37+08:00" content="2017-03-07">
               2017-03-07
             </time>
@@ -517,100 +516,6 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/01/PHP/" itemprop="url">
-                  PHP笔记
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
-              2017-03-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="PHP部分"><a href="#PHP部分" class="headerlink" title="PHP部分"></a>PHP部分</h2><h3 id="PHP概念"><a href="#PHP概念" class="headerlink" title="PHP概念"></a>PHP概念</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">PHP是什么？</div><div class="line">    PHP 是一种服务器端脚本编程语言</div><div class="line">    PHP: person home page  个人主页</div><div class="line">    PHP: Hypertext Preprocessor 超文本预处理器</div><div class="line">    </div><div class="line">类c语言：</div><div class="line">    PHP 这门编程语言（系统） 是由C语言开发的</div><div class="line">    语法风格与c语言相似</div><div class="line"></div><div class="line">PHP的编程范式：</div><div class="line">    1.面向过程</div><div class="line">    2.面向对象</div><div class="line"></div><div class="line">LAMP架构(Xampp、Wamp、phpStudy)</div><div class="line">    Linux Apache Mysql PHP</div><div class="line">    PHP-study(web开发/运行环境集成软件包)</div><div class="line">            \---apache、nginx、iis (http server)</div><div class="line">            \---php (script engine)</div><div class="line">            \---mysql (DBMS)</div><div class="line">互联网Internet(广域网)</div><div class="line">IP地址端口</div><div class="line"></div><div class="line">IP 互联网协议</div><div class="line">http server 是超文本传输协议服务（器）</div><div class="line">这个服务器可以让可相连的电脑通过域名/IP(以及端口) 从http服务器上获得静态网页！</div><div class="line"></div><div class="line">HTTP 超文本传输协议的特点： 无状态/短连接</div><div class="line">     请求/响应 request/response</div><div class="line">     打开网站中的网页所经过的步骤</div><div class="line">     1.浏览器输入域名  =&gt;      DNS(Domain  Name Server)域名服务器解析 》获取到IP地址 》</div><div class="line">     根据IP地址访问互联网/局域网中的服务器</div><div class="line">     以上的访问实际上就是对服务器网页资源的请求</div><div class="line">     服务器（Http Server）获得这个请求后，对其用户的请求进行相应的处理，然后对其请求响应结果以网页或</div><div class="line">     其他资源形式返回给客户端</div><div class="line">     （用户代理-通指浏览器）</div><div class="line"></div><div class="line">嵌入在html的为多页面php程序</div><div class="line">多页面php程序的优势：</div><div class="line">    1.快、效率高</div><div class="line">    2.缺点：逻辑与页面紧偶合</div><div class="line">     </div><div class="line">一个字符串可以用 4 种方式表达：</div><div class="line">    单引号</div><div class="line">    双引号</div><div class="line">     heredoc 语法结构（相当于单引号）</div><div class="line">     nowdoc 语法结构（相当于双引号）</div><div class="line">     </div><div class="line">问题：</div><div class="line">数组为什么能放入不同的元素</div><div class="line">    1.因为数组里存放的是引用</div><div class="line">    在PHP中 <span class="string">""</span> 与<span class="string">''</span>的加载速度哪个更快？</div><div class="line">    1.单引号更快，双引号的功能更强大</div><div class="line">    &lt;?php</div><div class="line">        <span class="variable">$love</span> = <span class="string">"I love you!"</span>;</div><div class="line">        <span class="variable">$string1</span> = <span class="string">"慕课网,<span class="variable">$love</span>"</span>;</div><div class="line">        <span class="variable">$string2</span> = <span class="string">'慕课网,$love'</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string1</span>;//输出结果为：慕课网,I love you!</div><div class="line">        <span class="built_in">echo</span> <span class="string">"&lt;br /&gt;"</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string2</span>;//输出结果为：慕课网,<span class="variable">$love</span></div><div class="line">    ?&gt;</div><div class="line">     </div><div class="line">如何优化网页</div><div class="line">    1.图片的优化</div><div class="line">    2.代码的优化</div><div class="line">    3.预加载（选用）</div><div class="line">    </div><div class="line">空结构体占几个字节</div><div class="line">    1个字节</div><div class="line">string 最大可以达到多少？</div><div class="line">    2GB</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2017/03/01/JavaScript/" itemprop="url">
                   JavaScript笔记
                 </a>
@@ -624,7 +529,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -717,7 +622,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -821,7 +726,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -924,7 +829,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -1004,6 +909,100 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/01/PHP/" itemprop="url">
+                  PHP笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
+              2017-03-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="PHP部分"><a href="#PHP部分" class="headerlink" title="PHP部分"></a>PHP部分</h2><h3 id="PHP概念"><a href="#PHP概念" class="headerlink" title="PHP概念"></a>PHP概念</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">PHP是什么？</div><div class="line">    PHP 是一种服务器端脚本编程语言</div><div class="line">    PHP: person home page  个人主页</div><div class="line">    PHP: Hypertext Preprocessor 超文本预处理器</div><div class="line">    </div><div class="line">类c语言：</div><div class="line">    PHP 这门编程语言（系统） 是由C语言开发的</div><div class="line">    语法风格与c语言相似</div><div class="line"></div><div class="line">PHP的编程范式：</div><div class="line">    1.面向过程</div><div class="line">    2.面向对象</div><div class="line"></div><div class="line">LAMP架构(Xampp、Wamp、phpStudy)</div><div class="line">    Linux Apache Mysql PHP</div><div class="line">    PHP-study(web开发/运行环境集成软件包)</div><div class="line">            \---apache、nginx、iis (http server)</div><div class="line">            \---php (script engine)</div><div class="line">            \---mysql (DBMS)</div><div class="line">互联网Internet(广域网)</div><div class="line">IP地址端口</div><div class="line">IP 互联网协议</div><div class="line">http server 是超文本传输协议服务（器）</div><div class="line">这个服务器可以让可相连的电脑通过域名/IP(以及端口) 从http服务器上获得静态网页！</div><div class="line"></div><div class="line">HTTP 超文本传输协议的特点： 无状态/短连接</div><div class="line">     请求/响应 request/response</div><div class="line">     打开网站中的网页所经过的步骤</div><div class="line">     1.浏览器输入域名  =&gt;      DNS(Domain  Name Server)域名服务器解析 》获取到IP地址 》</div><div class="line">     根据IP地址访问互联网/局域网中的服务器</div><div class="line">     以上的访问实际上就是对服务器网页资源的请求</div><div class="line">     服务器（Http Server）获得这个请求后，对其用户的请求进行相应的处理，然后对其请求响应结果以网页或</div><div class="line">     其他资源形式返回给客户端</div><div class="line">     （用户代理-通指浏览器）</div><div class="line"></div><div class="line">嵌入在html的为多页面php程序</div><div class="line">多页面php程序的优势：</div><div class="line">    1.快、效率高</div><div class="line">    2.缺点：逻辑与页面紧偶合</div><div class="line">     </div><div class="line">一个字符串可以用 4 种方式表达：</div><div class="line">    单引号</div><div class="line">    双引号</div><div class="line">     heredoc 语法结构（相当于单引号）</div><div class="line">     nowdoc 语法结构（相当于双引号）</div><div class="line">     </div><div class="line">问题：</div><div class="line">数组为什么能放入不同的元素</div><div class="line">    1.因为数组里存放的是引用</div><div class="line">    在PHP中 <span class="string">""</span> 与<span class="string">''</span>的加载速度哪个更快？</div><div class="line">    1.单引号更快，双引号的功能更强大</div><div class="line">    &lt;?php</div><div class="line">        <span class="variable">$love</span> = <span class="string">"I love you!"</span>;</div><div class="line">        <span class="variable">$string1</span> = <span class="string">"慕课网,<span class="variable">$love</span>"</span>;</div><div class="line">        <span class="variable">$string2</span> = <span class="string">'慕课网,$love'</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string1</span>;//输出结果为：慕课网,I love you!</div><div class="line">        <span class="built_in">echo</span> <span class="string">"&lt;br /&gt;"</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string2</span>;//输出结果为：慕课网,<span class="variable">$love</span></div><div class="line">    ?&gt;</div><div class="line">     </div><div class="line">如何优化网页</div><div class="line">    1.图片的优化</div><div class="line">    2.代码的优化</div><div class="line">    3.预加载（选用）</div><div class="line">    </div><div class="line">空结构体占几个字节</div><div class="line">    1个字节</div><div class="line">string 最大可以达到多少？</div><div class="line">    2GB</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/01/MySQL/" itemprop="url">
                   MySQL笔记
                 </a>
@@ -1017,7 +1016,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T16:23:14+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -1199,7 +1198,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2016-12-23T12:59:04+08:00" content="2016-12-23">
               2016-12-23
             </time>
@@ -1305,7 +1304,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">11</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -1352,7 +1351,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
