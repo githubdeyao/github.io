@@ -1,0 +1,539 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="title:在线文件操作上传文件上传文件的步骤: 12345678/** * 1.将文件夹上传到服务器的临时文件 * 一般通过input:file 来完成上传 * 临时文件夹的目录需要在php.ini文件中配置 * 将文件上传到临时文件夹中的文件 移动（复制） 到指定的目录 * 移动：move_uploaded_file($tmp_name,&amp;quot;upload/&amp;quot;.$name)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="张德瑶">
+<meta property="og:url" content="githubdeyao.github.io/2017/03/13/upload_file/index.html">
+<meta property="og:site_name" content="张德瑶">
+<meta property="og:description" content="title:在线文件操作上传文件上传文件的步骤: 12345678/** * 1.将文件夹上传到服务器的临时文件 * 一般通过input:file 来完成上传 * 临时文件夹的目录需要在php.ini文件中配置 * 将文件上传到临时文件夹中的文件 移动（复制） 到指定的目录 * 移动：move_uploaded_file($tmp_name,&amp;quot;upload/&amp;quot;.$name)">
+<meta property="og:updated_time" content="2017-03-13T07:20:35.714Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="张德瑶">
+<meta name="twitter:description" content="title:在线文件操作上传文件上传文件的步骤: 12345678/** * 1.将文件夹上传到服务器的临时文件 * 一般通过input:file 来完成上传 * 临时文件夹的目录需要在php.ini文件中配置 * 将文件上传到临时文件夹中的文件 移动（复制） 到指定的目录 * 移动：move_uploaded_file($tmp_name,&amp;quot;upload/&amp;quot;.$name)">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title>  | 张德瑶 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">张德瑶</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-03-13T15:12:25+08:00" content="2017-03-13">
+              2017-03-13
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h2 id="title-在线文件操作"><a href="#title-在线文件操作" class="headerlink" title="title:在线文件操作"></a>title:在线文件操作</h2><h3 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h3><p>上传文件的步骤:<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 1.将文件夹上传到服务器的临时文件</div><div class="line"> * 一般通过input:file 来完成上传</div><div class="line"> * 临时文件夹的目录需要在php.ini文件中配置</div><div class="line"> * 将文件上传到临时文件夹中的文件 移动（复制） 到指定的目录</div><div class="line"> * 移动：move_uploaded_file($tmp_name,&quot;upload/&quot;.$name)</div><div class="line"> * 复制: copy($tmp_name,&quot;upload/&quot;.$name);</div><div class="line"> */</div></pre></td></tr></table></figure></p>
+<p>在php.ini配置文件中的相关配置文件参数信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * file_uploads = On 支持HTTP上传</div><div class="line"> * upload_tmp_dir =&quot;I:/wamp/tmp&quot; 文件上传的临时目录</div><div class="line"> * upload_max_filesize = 2M  文件上传的最大值</div><div class="line"> * max_file_uploads = 20  运行一次上传的最大文件数</div><div class="line"> * post_max_size = 8M  POST方式发送数据的最大值</div><div class="line"> */</div></pre></td></tr></table></figure></p>
+<p>上传文件的错误号:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * 0  没有错误发生，文件上传成功</div><div class="line"> * 1  上传的文件超过了 php.ini 中 upload_max_filesize 选项限制的值</div><div class="line"> * 2  上传文件的大小超过了 HTML 表单中 MAX_FILE_SIZE 选项指定的值</div><div class="line"> * 3  文件只有部分被上传</div><div class="line"> * 4  没有文件被上传</div><div class="line"> * 6  找不到临时文件夹</div><div class="line"> * 7  文件写入失败</div><div class="line"> */</div></pre></td></tr></table></figure></p>
+<p>上传文件使用form表单的注意事项：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.方法必须用：post</div><div class="line">2.必须加上：enctype=&quot;multipart/form-data&quot;</div></pre></td></tr></table></figure></p>
+<p>实例：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--上传文件时form表单的注意事项：</span></div><div class="line">1.方法必须用：post</div><div class="line">2.必须加上：enctype="multipart/form-data"--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"upload_file.php"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"file"</span> <span class="attr">id</span>=<span class="string">""</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"上传"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取上传文件的信息（数组形式）</span></div><div class="line">$file = $_FILES[<span class="string">"file"</span>];</div><div class="line">$name = $file[<span class="string">"name"</span>];  <span class="comment">//获取文件名</span></div><div class="line">$type = $file[<span class="string">"type"</span>];  <span class="comment">//获取文件类型</span></div><div class="line">$tmp_name = $file[<span class="string">"tmp_name"</span>];  <span class="comment">//获取临时文件目录</span></div><div class="line">$error = $file[<span class="string">"error"</span>];  <span class="comment">//错误号</span></div><div class="line">$size = $file[<span class="string">"size"</span>];    <span class="comment">//获取文件大小</span></div><div class="line">$max_size = <span class="number">1</span>*<span class="number">1024</span>*<span class="number">1024</span>;  <span class="comment">//规定文件上传的大小</span></div><div class="line">$pathinfo = pathinfo($name);    <span class="comment">//获取文件名的信息（数组形式）</span></div><div class="line">$ext = $pathinfo[<span class="string">"extension"</span>];  <span class="comment">//获取文件名的后缀</span></div><div class="line">$exts = <span class="keyword">array</span>(<span class="string">"txt"</span>,<span class="string">"png"</span>,<span class="string">"gif"</span>);  <span class="comment">//规定允许上传的文件的格式</span></div><div class="line">$flag = <span class="keyword">true</span>;</div><div class="line">$dir = <span class="string">"uploade"</span>;  <span class="comment">//指定上传的目录</span></div><div class="line"><span class="keyword">if</span>($error == <span class="number">0</span>)&#123;</div><div class="line">    <span class="comment">//判断文件大小</span></div><div class="line">    <span class="keyword">if</span>($size&gt;$max_size)&#123;</div><div class="line">        <span class="keyword">exit</span>(<span class="string">"上传失败：文件不能大于1024KB"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//判断文件的格式</span></div><div class="line">    <span class="keyword">if</span>(!in_array($ext,$exts))&#123;</div><div class="line">        <span class="keyword">exit</span>(<span class="string">"上传失败：不支持该文件格式"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//判断文件是否通过HTTP POST方式上传</span></div><div class="line">    <span class="keyword">if</span>(!is_uploaded_file($tmp_name))&#123;</div><div class="line">        <span class="keyword">exit</span>(<span class="string">"该文件不是通过HTTP POST方式上传"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//判断是否为真的图片</span></div><div class="line"></div><div class="line">    <span class="comment">//判断文件夹是否存在</span></div><div class="line">    <span class="keyword">if</span>(!file_exists($dir))&#123;</div><div class="line">        mkdir($dir);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//将文件名设为唯一不重复</span></div><div class="line">    $file_name = md5(uniqid(microtime())).<span class="string">"."</span>.$ext;</div><div class="line">    <span class="comment">//将临时文件移动到指定目录</span></div><div class="line">    <span class="keyword">if</span>(move_uploaded_file($tmp_name,$dir.<span class="string">"/"</span>.$file_name))&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"文件上传成功"</span>;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"文件上传失败"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">switch</span>($error)&#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"上传文件大小超出"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"上传文件大小超出"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"文件只有部分被上传"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"没有文件被上传"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">6</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"找不到临时文件夹"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">7</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"文件写入失败"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/10/ThinkPHP/" rel="next" title="ThinkPHP笔记">
+                <i class="fa fa-chevron-left"></i> ThinkPHP笔记
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://om2gh1ti2.bkt.clouddn.com/0.jpg"
+               alt="zhang_deyao" />
+          <p class="site-author-name" itemprop="name">zhang_deyao</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-在线文件操作"><span class="nav-number">1.</span> <span class="nav-text">title:在线文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上传文件"><span class="nav-number">1.1.</span> <span class="nav-text">上传文件</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhang_deyao</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
