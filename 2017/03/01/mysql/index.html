@@ -108,7 +108,7 @@ DBA ：Database Administrator（数据库管理员）
 二、导入SQL文件
 登录mysql
 准备好sql文件，并记清SQL文">
-<meta property="og:updated_time" content="2017-03-03T11:01:21.999Z">
+<meta property="og:updated_time" content="2017-03-15T09:30:47.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL笔记">
 <meta name="twitter:description" content="概念
@@ -387,7 +387,7 @@ DBA ：Database Administrator（数据库管理员）
 <p>HAVING 子句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">由于`WHERE`没办法与聚合函数一起使用，所有就增加了`HAVING`子句来对数据进行筛选。</div><div class="line"></div><div class="line">举例：查询每个科目大于90的分数</div><div class="line">SELECT `c_name`,AVG(`grade`) as avg_grade FROM `score` GROUP BY `c_name` HAVING avg_grade&gt;90;</div></pre></td></tr></table></figure></p>
 <h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">名称			描述								参数的意义</div><div class="line">char(n)			长度固定，最多可有255字符			n表示字符的个数</div><div class="line">varchar(n)		长度可变，最多可有65535个字符		~~</div><div class="line">tinytext		长度可变，最多可有255个字符</div><div class="line">text			长度可变，最多可有65535个字符</div><div class="line">mediumtext		长度可变，最多可有2^24 - 1个字符</div><div class="line">longtext		长度可变，最多可有2^32 - 1个字符</div><div class="line">date            日期</div><div class="line">datetime        日期时间</div><div class="line">time            时间</div><div class="line">timestamp       自动储存记录修改时间（最后修改时间）</div></pre></td></tr></table></figure>
 <h3 id="单位换算："><a href="#单位换算：" class="headerlink" title="单位换算："></a>单位换算：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">一个英文字母(不分大小写)占一个字节的空间;一个中文汉字占两个字节的空间,标点符号也一样。</div><div class="line">计算机中的CPU位数指的是CPU一次能处理的最大位数。例如32位计算机的CPU一次最多能处理</div><div class="line">32位数据</div><div class="line">1字节(Byte） = 8位(bit)</div><div class="line">1KB = 1024 Byte</div><div class="line">1M = 1024 KB</div><div class="line">1G = 1024 M</div><div class="line">1T = 1024 G</div><div class="line">1P = 1024 T</div></pre></td></tr></table></figure>
-
+<a id="more"></a>
       
     </div>
 
