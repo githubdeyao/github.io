@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="面向对象的编程实现（OOP，Object Oriented Programming）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位//类：类就是把具有相似特性的对象归纳到">
+<meta name="description" content="面向对象的编程实现（OOP，Object Oriented Programming）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位//">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象编程">
 <meta property="og:url" content="githubdeyao.github.io/2017/03/14/OOP/index.html">
 <meta property="og:site_name" content="张德瑶">
-<meta property="og:description" content="面向对象的编程实现（OOP，Object Oriented Programming）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位//类：类就是把具有相似特性的对象归纳到">
-<meta property="og:updated_time" content="2017-03-15T09:24:04.215Z">
+<meta property="og:description" content="面向对象的编程实现（OOP，Object Oriented Programming）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位//">
+<meta property="og:updated_time" content="2017-03-16T07:15:00.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象编程">
-<meta name="twitter:description" content="面向对象的编程实现（OOP，Object Oriented Programming）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位//类：类就是把具有相似特性的对象归纳到">
+<meta name="twitter:description" content="面向对象的编程实现（OOP，Object Oriented Programming）123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位//">
 
 
 
@@ -169,7 +169,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            主页
+            Home
           </a>
         </li>
       
@@ -179,7 +179,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            文档
+            Archives
           </a>
         </li>
       
@@ -189,7 +189,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            标签
+            Tags
           </a>
         </li>
       
@@ -242,7 +242,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posted on</span>
             <time itemprop="dateCreated" datetime="2017-03-14T11:17:57+08:00" content="2017-03-14">
               2017-03-14
             </time>
@@ -271,7 +271,7 @@
       
 
       
-        <h3 id="面向对象的编程实现（OOP，Object-Oriented-Programming）"><a href="#面向对象的编程实现（OOP，Object-Oriented-Programming）" class="headerlink" title="面向对象的编程实现（OOP，Object Oriented Programming）"></a>面向对象的编程实现（OOP，Object Oriented Programming）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位</div><div class="line">//类：类就是把具有相似特性的对象归纳到一个类中，他是一组相同属性和行为的对象的集合</div><div class="line"></div><div class="line">/**</div><div class="line"> * 类和对象的关系：</div><div class="line"> * 类是相似对象的描述，类就是对象的一个蓝图，他只是一个模板，却暂时没有被实现</div><div class="line"> * 先有类，再有对象</div><div class="line"> * 类是对象的抽象</div><div class="line"> * 对象是类的实例</div><div class="line"> */</div><div class="line"></div><div class="line">/**</div><div class="line"> * public(var) 公开的，允许外部调用</div><div class="line"> * private 私有的属性不允许外部调用，只允许当前类进行访问</div><div class="line"> * protected 受保护的属性不允许外部调用，允许当前类和子类（继承）进行调用</div><div class="line"> * //构造函数：function __construct() ：一个类中只有一个，自动调用</div><div class="line"> * //析构函数：function __destruct() ：一个类中只有一个，自动调用</div><div class="line"> */</div><div class="line"> </div><div class="line"> /*</div><div class="line"> * 方法的覆盖（重载）</div><div class="line"> * 如果父类中方法使用了final关键词修饰，则子类不能对该方法进行重载</div><div class="line"> * 如果一个子类使用了final来修饰，那么该类不能被继承</div><div class="line"> * 注：final 写在类或方法的最前面</div><div class="line"> *</div><div class="line"> *</div><div class="line"> * :: (范围解析操作符)</div><div class="line"> * 作用：</div><div class="line"> * 1.用来访问被覆盖的成员属性或成员方法</div><div class="line"> * 2.用来访问静态成员（static）</div><div class="line"> * 3.用来访问类常量（在类中声明的常量）</div><div class="line">  *</div><div class="line">  * parent::</div><div class="line">  * 访问父类的静态成员或者被子类覆盖的属性和方法</div><div class="line">  * self::</div><div class="line">  * 访问当前类的成员属性或方法</div><div class="line">  *</div><div class="line">  * static(静态方法)</div><div class="line">  * 不需要通过实例化对象就可以调用，也不能通过伪变量$this-&gt;来访问，可用self::进行访问</div><div class="line"> */</div><div class="line"> </div><div class="line"> /*</div><div class="line">  * abstract:定义抽象类,使用类继承的关键字extends实现</div><div class="line">  * interface:定义接口,通过关键字implements来实现</div><div class="line">  *</div><div class="line">  * 相同点：</div><div class="line">  * 函数体内不能写任何东西，连两个大括号都不能写</div><div class="line">  *</div><div class="line">  * 不同点：</div><div class="line">  * 1.接口没有数据成员，但是抽象类有数据成员，抽象类可以实现数据的封装；</div><div class="line">  * 2.接口没有构造函数，抽象类可以有构造函数；</div><div class="line">  * 3.接口中的方法都是public类型，而抽象类中的方法可以使用private、protected或public来修饰；</div><div class="line">  * 4.一个类可以同时实现多个接口，但是只能实现一个抽象类。</div><div class="line">  */</div></pre></td></tr></table></figure>
+        <h3 id="面向对象的编程实现（OOP，Object-Oriented-Programming）"><a href="#面向对象的编程实现（OOP，Object-Oriented-Programming）" class="headerlink" title="面向对象的编程实现（OOP，Object Oriented Programming）"></a>面向对象的编程实现（OOP，Object Oriented Programming）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">//对象;对象是系统中用来描述客观事物的一个实体，是构成系统的最基本的组成单位</div><div class="line">//类：类就是把具有相似特性的对象归纳到一个类中，他是一组相同属性和行为的对象的集合</div><div class="line"></div><div class="line">/**</div><div class="line"> * 类和对象的关系：</div><div class="line"> * 类是相似对象的描述，类就是对象的一个蓝图，他只是一个模板，却暂时没有被实现</div><div class="line"> * 先有类，再有对象</div><div class="line"> * 类是对象的抽象</div><div class="line"> * 对象是类的实例</div><div class="line"> */</div><div class="line"></div><div class="line">/**</div><div class="line"> * public(var) 公开的，允许外部调用</div><div class="line"> * private 私有的属性不允许外部调用，只允许当前类进行访问</div><div class="line"> * protected 受保护的属性不允许外部调用，允许当前类和子类（继承）进行调用</div><div class="line"> * //构造函数：function __construct() ：一个类中只有一个，自动调用</div><div class="line"> * //析构函数：function __destruct() ：一个类中只有一个，自动调用</div><div class="line"> */</div><div class="line"> </div><div class="line"> /*</div><div class="line"> * 方法的覆盖（重载）</div><div class="line"> * 如果父类中方法使用了final关键词修饰，则子类不能对该方法进行重载</div><div class="line"> * 如果一个子类使用了final来修饰，那么该类不能被继承</div><div class="line"> * 注：final 写在类或方法的最前面</div><div class="line"> *</div><div class="line"> *</div><div class="line"> * :: (范围解析操作符)</div><div class="line"> * 作用：</div><div class="line"> * 1.用来访问被覆盖的成员属性或成员方法</div><div class="line"> * 2.用来访问静态成员（static）</div><div class="line"> * 3.用来访问类常量（在类中声明的常量）</div><div class="line">  *</div><div class="line">  * parent::</div><div class="line">  * 访问父类的静态成员或者被子类覆盖的属性和方法</div><div class="line">  * self::</div><div class="line">  * 访问当前类的成员属性或方法</div><div class="line">  *</div><div class="line">  * static(静态方法)</div><div class="line">  * 不需要通过实例化对象就可以调用，也不能通过伪变量$this-&gt;来访问，可用self::进行访问</div><div class="line"> */</div><div class="line"> </div><div class="line"> /*</div><div class="line">  * abstract:定义抽象类,使用类继承的关键字extends实现</div><div class="line">  * interface:定义接口,通过关键字implements来实现</div><div class="line">  *</div><div class="line">  * 相同点：</div><div class="line">  * 函数体内不能写任何东西，连两个大括号都不能写</div><div class="line">  *</div><div class="line">  * 不同点：</div><div class="line">  * 1.接口没有数据成员，但是抽象类有数据成员，抽象类可以实现数据的封装；</div><div class="line">  * 2.接口没有构造函数，抽象类可以有构造函数；</div><div class="line">  * 3.接口中的方法都是public类型，而抽象类中的方法可以使用private、protected或public来修饰；</div><div class="line">  * 4.一个类可以同时实现多个接口，但是只能实现一个抽象类。</div><div class="line">  */</div><div class="line"></div><div class="line"></div><div class="line">/**</div><div class="line">* 命名空间：</div><div class="line">* 用一句话说，就是：把 类、接口、函数、变量 等放到逻辑子文件夹中去，以避免命名冲突</div><div class="line">* 1.通过关键字namespace 来声明,命名空间必须是程序脚本的第一条语句，除了declare关键字外</div><div class="line">* 2.受命名空间影响的有：类、接口、函数、常量</div><div class="line">* 3.同一个命名空间下可定义很多的文件，即允许将同一个命名空间的内容分割存放在不同的文件中</div><div class="line">*/</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -350,10 +350,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -370,7 +370,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">12</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
@@ -428,7 +428,7 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
