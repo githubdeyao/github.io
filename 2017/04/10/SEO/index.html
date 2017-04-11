@@ -84,16 +84,16 @@
 
 
 
+<meta name="description" content="dedecms调用顶级栏目和顶级栏目下的二级栏目1234567891011 &amp;#123;dede:field.typename runphp=’yes’&amp;#125;    $ID = @me;    $sql = “SELECT * FROM `dede_arctype` WHERE id=$ID”;    $query = mysql_query($sql);$row=mysql_fetch_a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="githubdeyao.github.io/2016/12/23/post/index.html">
+<meta property="og:title" content="SEO优化与dedeCMS">
+<meta property="og:url" content="githubdeyao.github.io/2017/04/10/SEO/index.html">
 <meta property="og:site_name" content="张德瑶">
-<meta property="og:image" content="http://om2gh1ti2.bkt.clouddn.com/timg%20%281%29.jpg">
-<meta property="og:image" content="http://om2gh1ti2.bkt.clouddn.com/timg.jpg">
-<meta property="og:updated_time" content="2017-03-15T09:31:27.508Z">
+<meta property="og:description" content="dedecms调用顶级栏目和顶级栏目下的二级栏目1234567891011 &amp;#123;dede:field.typename runphp=’yes’&amp;#125;    $ID = @me;    $sql = “SELECT * FROM `dede_arctype` WHERE id=$ID”;    $query = mysql_query($sql);$row=mysql_fetch_a">
+<meta property="og:updated_time" content="2017-04-10T11:30:31.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:image" content="http://om2gh1ti2.bkt.clouddn.com/timg%20%281%29.jpg">
+<meta name="twitter:title" content="SEO优化与dedeCMS">
+<meta name="twitter:description" content="dedecms调用顶级栏目和顶级栏目下的二级栏目1234567891011 &amp;#123;dede:field.typename runphp=’yes’&amp;#125;    $ID = @me;    $sql = “SELECT * FROM `dede_arctype` WHERE id=$ID”;    $query = mysql_query($sql);$row=mysql_fetch_a">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> 相册 | 张德瑶 </title>
+  <title> SEO优化与dedeCMS | 张德瑶 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -231,7 +231,7 @@
             
             
               
-                相册
+                SEO优化与dedeCMS
               
             
           </h1>
@@ -243,8 +243,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-12-23T12:59:04+08:00" content="2016-12-23">
-              2016-12-23
+            <time itemprop="dateCreated" datetime="2017-04-10T19:11:07+08:00" content="2017-04-10">
+              2017-04-10
             </time>
           </span>
 
@@ -271,8 +271,17 @@
       
 
       
-        <p><img src="http://om2gh1ti2.bkt.clouddn.com/timg%20%281%29.jpg" alt="this is a kitty"><br><img src="http://om2gh1ti2.bkt.clouddn.com/timg.jpg" alt="this is a kitty"><br><a id="more"></a></p>
-
+        <h2 id="dedecms"><a href="#dedecms" class="headerlink" title="dedecms"></a>dedecms</h2><p>调用顶级栏目和顶级栏目下的二级栏目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> &#123;dede:field.typename runphp=’yes’&#125;</div><div class="line">    $ID = @me;</div><div class="line">    $sql = “SELECT * FROM `dede_arctype` WHERE id=$ID”;</div><div class="line">    $query = mysql_query($sql);$row=mysql_fetch_array($query);</div><div class="line">    $relID = “$row[reid]“;</div><div class="line">    if($relID == 0) &#123;@me = $row[typename];&#125;</div><div class="line">    else&#123;$sql = “SELECT `typename` FROM `dede_arctype` WHERE id=$relID”;</div><div class="line">    $query = mysql_query($sql);</div><div class="line">    $row=mysql_fetch_array($query);</div><div class="line">    @me = $row[typename];&#125;</div><div class="line">&#123;/dede:field.typename&#125;</div></pre></td></tr></table></figure></p>
+<p>调用当前栏目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;dede:field name=&quot;typename&quot;/&#125;</div></pre></td></tr></table></figure></p>
+<p>网页命名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">首页：index.htm</div><div class="line">文章列表页：list_article.htm</div><div class="line">图片列表页：img-article.htm</div><div class="line">频道封面页：index_about.htm</div><div class="line">文章页：article_article.htm</div></pre></td></tr></table></figure></p>
+<h2 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO 搜索引擎优化"></a>SEO 搜索引擎优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">定义：是指一种利用搜索引擎的搜索规则 来提高网站 在搜索引擎内排名的方式。</div><div class="line">目的：获得较好的排名，让更多的客户看到，增加浏览量。</div><div class="line">步骤：</div><div class="line">    1.（爬行和抓取）“搜索引擎蜘蛛”通过跟踪链接来访问网页，获得页面代码存到自己的数据库中。</div><div class="line">    2.（预处理）索引程序对抓取来的页面数据进行文字图片提取、分词等处理。</div><div class="line">    3.（排名）当搜索者输入词之后，排名程序就开始调用数据库已经保存的信息，生成页面之后显示给浏览者。</div></pre></td></tr></table></figure>
+<p>主关键词与长尾关键词</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">主关键词特点：作为首页的标题使用  有稳定的搜索量 对网站的产品和服务有需求 有热度的词语 名词居多</div><div class="line">长尾关键词特点：非网站的主关键词，但却能为网站带来搜索量的关键词  一般放在列表页</div></pre></td></tr></table></figure>
+<p>常用工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">百度指数  百度下拉框  相关搜索  同行的网站</div><div class="line">site:www.zhangdeyao.top   查看是否被收录</div><div class="line">站长工具：查看网站的权重（是否被收录、浏览量、是否备案等）</div><div class="line">熊猫关键词工具 火车采集器</div></pre></td></tr></table></figure>
+<h2 id="网站代码优化"><a href="#网站代码优化" class="headerlink" title="网站代码优化"></a>网站代码优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">h1标签的优化  一个页面出现一次</div><div class="line">nofollow标签的优化  禁止搜索引擎抓取该页面（好处：将不需要排名页面的权重分配到其他页面上去）  </div><div class="line">如：&lt;a href=&quot;&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;  像登陆、注册、友情链接等不需要被抓取</div><div class="line">img标签  一定加上 &lt;img sre=&quot;&quot; alt=&quot;&quot; title=&quot;&quot;&gt;  好处：能让网页的图片被搜索引擎所抓取到</div><div class="line">标题的设计技巧 32个字  关键词不要堆砌 写上公司名字</div><div class="line">网页三要素 标题 关键词 描述</div></pre></td></tr></table></figure>
+<p>拓展</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">B2B:企业对企业（1688）</div><div class="line">B2C:企业对个人（京东）</div><div class="line">C2C:个人对个人（淘宝）</div><div class="line">O2O：线上和线下的结合 （美团）</div><div class="line">OfO（共享）线下运维</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -296,17 +305,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/02/hello-world/" rel="next" title="如何创建git">
-                <i class="fa fa-chevron-left"></i> 如何创建git
+              <a href="/2017/03/14/OOP/" rel="next" title="面向对象编程的方法">
+                <i class="fa fa-chevron-left"></i> 面向对象编程的方法
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/01/MySQL/" rel="prev" title="MySQL设计与管理">
-                MySQL设计与管理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -406,7 +411,7 @@
               
             
             
-              <p class="post-toc-empty">Dieser Artikel hat kein Inhaltsverzeichnis</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#dedecms"><span class="nav-number">1.</span> <span class="nav-text">dedecms</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SEO-搜索引擎优化"><span class="nav-number">2.</span> <span class="nav-text">SEO 搜索引擎优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站代码优化"><span class="nav-number">3.</span> <span class="nav-text">网站代码优化</span></a></li></ol></div>
             
           </div>
         </section>

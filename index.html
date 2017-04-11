@@ -167,7 +167,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            主页
           </a>
         </li>
       
@@ -177,7 +177,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            文档
           </a>
         </li>
       
@@ -187,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -230,6 +230,109 @@
             
               
                 
+                <a class="post-title-link" href="/2017/04/10/SEO/" itemprop="url">
+                  SEO优化与dedeCMS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2017-04-10T19:11:07+08:00" content="2017-04-10">
+              2017-04-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="dedecms"><a href="#dedecms" class="headerlink" title="dedecms"></a>dedecms</h2><p>调用顶级栏目和顶级栏目下的二级栏目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"> &#123;dede:field.typename runphp=’yes’&#125;</div><div class="line">    $ID = @me;</div><div class="line">    $sql = “SELECT * FROM `dede_arctype` WHERE id=$ID”;</div><div class="line">    $query = mysql_query($sql);$row=mysql_fetch_array($query);</div><div class="line">    $relID = “$row[reid]“;</div><div class="line">    if($relID == 0) &#123;@me = $row[typename];&#125;</div><div class="line">    else&#123;$sql = “SELECT `typename` FROM `dede_arctype` WHERE id=$relID”;</div><div class="line">    $query = mysql_query($sql);</div><div class="line">    $row=mysql_fetch_array($query);</div><div class="line">    @me = $row[typename];&#125;</div><div class="line">&#123;/dede:field.typename&#125;</div></pre></td></tr></table></figure></p>
+<p>调用当前栏目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;dede:field name=&quot;typename&quot;/&#125;</div></pre></td></tr></table></figure></p>
+<p>网页命名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">首页：index.htm</div><div class="line">文章列表页：list_article.htm</div><div class="line">图片列表页：img-article.htm</div><div class="line">频道封面页：index_about.htm</div><div class="line">文章页：article_article.htm</div></pre></td></tr></table></figure></p>
+<h2 id="SEO-搜索引擎优化"><a href="#SEO-搜索引擎优化" class="headerlink" title="SEO 搜索引擎优化"></a>SEO 搜索引擎优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">定义：是指一种利用搜索引擎的搜索规则 来提高网站 在搜索引擎内排名的方式。</div><div class="line">目的：获得较好的排名，让更多的客户看到，增加浏览量。</div><div class="line">步骤：</div><div class="line">    1.（爬行和抓取）“搜索引擎蜘蛛”通过跟踪链接来访问网页，获得页面代码存到自己的数据库中。</div><div class="line">    2.（预处理）索引程序对抓取来的页面数据进行文字图片提取、分词等处理。</div><div class="line">    3.（排名）当搜索者输入词之后，排名程序就开始调用数据库已经保存的信息，生成页面之后显示给浏览者。</div></pre></td></tr></table></figure>
+<p>主关键词与长尾关键词</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">主关键词特点：作为首页的标题使用  有稳定的搜索量 对网站的产品和服务有需求 有热度的词语 名词居多</div><div class="line">长尾关键词特点：非网站的主关键词，但却能为网站带来搜索量的关键词  一般放在列表页</div></pre></td></tr></table></figure>
+<p>常用工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">百度指数  百度下拉框  相关搜索  同行的网站</div><div class="line">site:www.zhangdeyao.top   查看是否被收录</div><div class="line">站长工具：查看网站的权重（是否被收录、浏览量、是否备案等）</div><div class="line">熊猫关键词工具 火车采集器</div></pre></td></tr></table></figure>
+<h2 id="网站代码优化"><a href="#网站代码优化" class="headerlink" title="网站代码优化"></a>网站代码优化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">h1标签的优化  一个页面出现一次</div><div class="line">nofollow标签的优化  禁止搜索引擎抓取该页面（好处：将不需要排名页面的权重分配到其他页面上去）  </div><div class="line">如：&lt;a href=&quot;&quot; rel=&quot;nofollow&quot;&gt;&lt;/a&gt;  像登陆、注册、友情链接等不需要被抓取</div><div class="line">img标签  一定加上 &lt;img sre=&quot;&quot; alt=&quot;&quot; title=&quot;&quot;&gt;  好处：能让网页的图片被搜索引擎所抓取到</div><div class="line">标题的设计技巧 32个字  关键词不要堆砌 写上公司名字</div><div class="line">网页三要素 标题 关键词 描述</div></pre></td></tr></table></figure>
+<p>拓展</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">B2B:企业对企业（1688）</div><div class="line">B2C:企业对个人（京东）</div><div class="line">C2C:个人对个人（淘宝）</div><div class="line">O2O：线上和线下的结合 （美团）</div><div class="line">OfO（共享）线下运维</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/03/14/OOP/" itemprop="url">
                   面向对象编程的方法
                 </a>
@@ -243,7 +346,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-14T11:17:57+08:00" content="2017-03-14">
               2017-03-14
             </time>
@@ -336,7 +439,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-13T15:12:25+08:00" content="2017-03-13">
               2017-03-13
             </time>
@@ -374,7 +477,7 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取上传文件的信息（数组形式）</span></div><div class="line">$file = $_FILES[<span class="string">"file"</span>];</div><div class="line">$name = $file[<span class="string">"name"</span>];  <span class="comment">//获取文件名</span></div><div class="line">$type = $file[<span class="string">"type"</span>];  <span class="comment">//获取文件类型</span></div><div class="line">$tmp_name = $file[<span class="string">"tmp_name"</span>];  <span class="comment">//获取临时文件目录</span></div><div class="line">$error = $file[<span class="string">"error"</span>];  <span class="comment">//错误号</span></div><div class="line">$size = $file[<span class="string">"size"</span>];    <span class="comment">//获取文件大小</span></div><div class="line">$max_size = <span class="number">1</span>*<span class="number">1024</span>*<span class="number">1024</span>;  <span class="comment">//规定文件上传的大小</span></div><div class="line">$pathinfo = pathinfo($name);    <span class="comment">//获取文件名的信息（数组形式）</span></div><div class="line">$ext = $pathinfo[<span class="string">"extension"</span>];  <span class="comment">//获取文件名的后缀</span></div><div class="line">$exts = <span class="keyword">array</span>(<span class="string">"txt"</span>,<span class="string">"png"</span>,<span class="string">"gif"</span>);  <span class="comment">//规定允许上传的文件的格式</span></div><div class="line">$flag = <span class="keyword">true</span>;</div><div class="line">$dir = <span class="string">"uploade"</span>;  <span class="comment">//指定上传的目录</span></div><div class="line"><span class="keyword">if</span>($error == <span class="number">0</span>)&#123;</div><div class="line">    <span class="comment">//判断文件大小</span></div><div class="line">    <span class="keyword">if</span>($size&gt;$max_size)&#123;</div><div class="line">        <span class="keyword">exit</span>(<span class="string">"上传失败：文件不能大于1024KB"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//判断文件的格式</span></div><div class="line">    <span class="keyword">if</span>(!in_array($ext,$exts))&#123;</div><div class="line">        <span class="keyword">exit</span>(<span class="string">"上传失败：不支持该文件格式"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//判断文件是否通过HTTP POST方式上传</span></div><div class="line">    <span class="keyword">if</span>(!is_uploaded_file($tmp_name))&#123;</div><div class="line">        <span class="keyword">exit</span>(<span class="string">"该文件不是通过HTTP POST方式上传"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//判断是否为真的图片</span></div><div class="line"></div><div class="line">    <span class="comment">//判断文件夹是否存在</span></div><div class="line">    <span class="keyword">if</span>(!file_exists($dir))&#123;</div><div class="line">        mkdir($dir);</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//将文件名设为唯一不重复</span></div><div class="line">    $file_name = md5(uniqid(microtime())).<span class="string">"."</span>.$ext;</div><div class="line">    <span class="comment">//将临时文件移动到指定目录</span></div><div class="line">    <span class="keyword">if</span>(move_uploaded_file($tmp_name,$dir.<span class="string">"/"</span>.$file_name))&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"文件上传成功"</span>;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">"文件上传失败"</span>;</div><div class="line">    &#125;</div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">    <span class="keyword">switch</span>($error)&#123;</div><div class="line">        <span class="keyword">case</span> <span class="number">1</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"上传文件大小超出"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">2</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"上传文件大小超出"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"文件只有部分被上传"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">4</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"没有文件被上传"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">6</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"找不到临时文件夹"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="number">7</span>:</div><div class="line">            <span class="keyword">echo</span> <span class="string">"文件写入失败"</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/13/upload_file/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -437,7 +540,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-10T11:51:35+08:00" content="2017-03-10">
               2017-03-10
             </time>
@@ -470,7 +573,7 @@
           <h3 id="MVC思想"><a href="#MVC思想" class="headerlink" title="MVC思想"></a>MVC思想</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">MVC :模型（Model）、视图（View）、控制器（Controller）</div><div class="line">模型：处理数据和业务逻辑</div><div class="line">视图：通过布局向用户展示数据</div><div class="line">控制器：接受用户请求，并调用相应的模型处理</div><div class="line">MVC的优势：</div><div class="line">1.（mvc的三个层）各司其职，互不干扰；</div><div class="line">2.有利于开发中的分工；</div><div class="line">3.有利于代码的重用</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/10/ThinkPHP/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -533,7 +636,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-07T16:48:37+08:00" content="2017-03-07">
               2017-03-07
             </time>
@@ -568,305 +671,7 @@
 <h3 id="PDO预处理语句"><a href="#PDO预处理语句" class="headerlink" title="PDO预处理语句"></a>PDO预处理语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">//echo phpinfo();</div><div class="line">header(&quot;content-type: text/html; charset=utf-8&quot;);</div><div class="line">try&#123;</div><div class="line">    $dsn = &quot;mysql:host=localhost;dbname=test&quot;;</div><div class="line">    $username = &quot;root&quot;;</div><div class="line">    $password = &quot;zhang&quot;;</div><div class="line">    $pdo = new PDO($dsn,$username,$password);</div><div class="line"></div><div class="line">    //准备预处理</div><div class="line">     $sql = &quot;insert into book_ass(name,email,password) values(?,?,?)&quot;;</div><div class="line">     $pdo_s = $pdo-&gt;prepare($sql);</div><div class="line"></div><div class="line">    //绑定参数</div><div class="line">    $name = &quot;jack&quot;;</div><div class="line">    $email = &quot;1136471076@qq.com&quot;;</div><div class="line">    $pass = md5(&quot;dfgdsgag&quot;);</div><div class="line"></div><div class="line">    //执行</div><div class="line">   /* 1.</div><div class="line">    $pdo_s-&gt;bindParam(1,$name);</div><div class="line">    $pdo_s-&gt;bindParam(2,$email);</div><div class="line">    $pdo_s-&gt;bindParam(3,$pass);</div><div class="line"></div><div class="line">    $res = $pdo_s-&gt;execute();</div><div class="line">    var_dump($res);*/</div><div class="line"></div><div class="line">   //2.</div><div class="line">    $res = $pdo_s-&gt;execute(array($name,$email,$pass));</div><div class="line">    var_dump($res);</div><div class="line"></div><div class="line">&#125;catch(PDOException $e)&#123;</div><div class="line">    echo $e-&gt;getMessage();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/07/connect_mysql/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/01/JSON/" itemprop="url">
-                  JSON相关
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
-              2017-03-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="JSON对象相关笔记"><a href="#JSON对象相关笔记" class="headerlink" title="JSON对象相关笔记"></a>JSON对象相关笔记</h2><h3 id="什么是DOM"><a href="#什么是DOM" class="headerlink" title="什么是DOM"></a>什么是DOM</h3><h4 id="Document-Object-Model-简称DOM，中文翻译：文档对象模型"><a href="#Document-Object-Model-简称DOM，中文翻译：文档对象模型" class="headerlink" title="Document Object Model 简称DOM，中文翻译：文档对象模型"></a>Document Object Model 简称DOM，中文翻译：文档对象模型</h4><p>1.DOM的查询</p>
-<p>2.新建DOM节点</p>
-<p>3.删除DOM节点</p>
-<p>4.修改DOM节点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.获取DOM节点</div><div class="line">1.1 通过id获取</div><div class="line"> var id =document.getElementById();</div><div class="line">1.2 通过标签获取</div><div class="line"> var p =document.getElementsByTagName();</div><div class="line">1.3 通过类名获取（慎用：不支持IE5/6/7/8）</div><div class="line"> var class =document.getElementsByClassName();</div><div class="line">1.4 querySelectorAll();</div></pre></td></tr></table></figure></p>
-<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>JSON：JavaScript 对象表示法（JavaScript Object Notation）。</p>
-<p>JSON 是存储和交换文本信息的语法。类似 XML。</p>
-<p>JSON 比 XML 更小、更快，更易解析。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.复合类型的值只能是数组对象，不能是函数、正则表达式对象、日期对象。</div><div class="line">2.简单类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和null(不能使用NaN，infinity,-infinity和undefined)。</div><div class="line">3.字符串必须使用双引号表示，不能使用单引号。</div><div class="line">4.对象的键名必须放在双引号里面。</div><div class="line">5.数组或对象最后一个成员的后面，不能加逗号。</div></pre></td></tr></table></figure></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var a =&#123;"name":"周杰伦","age":36,"sex":"男","love":"girl","like":"music"&#125;; //JSON对象</div><div class="line">console.log(a);</div><div class="line">var arr =["name","age"];</div><div class="line">var s =JSON.stringify(a,arr);  //将指定JSON转换为字符串</div><div class="line">console.log(s);</div><div class="line">localStorage.setItem("a",s);  //存到localStorage</div><div class="line">//localStorage.clear()  //删除全部的localStorage</div><div class="line">localStorage.removeItem("key");  //删除指定的localStorage</div><div class="line">var shift = localStorage.getItem("a");  //从localStorage中取出数据</div><div class="line">var shift =JSON.parse(shift);  //将字符串转换为JSON</div><div class="line">console.log(shift);</div></pre></td></tr></table></figure>
-<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">鼠标事件</div><div class="line">    1.点击事件</div><div class="line">        1.1 单击 onclick</div><div class="line">        1.2 双击 ondblclick</div><div class="line">        1.3 右键 oncontextmenu</div><div class="line">    2.滑动事件</div><div class="line">    3.滚轮事件</div><div class="line">键盘事件  onkeydown(键按下) onkeyup(键弹起)  onkeypress(按下并弹起)</div><div class="line">HTML事件</div><div class="line">window.onload=<span class="function"><span class="title">function</span></span>()&#123;&#125;</div></pre></td></tr></table></figure>
-<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span>Interval(func/code,300);  重复执行，相同时间间隔后无限循环执行</div><div class="line"><span class="built_in">set</span>Timeout(func/code,300);   只执行一次</div></pre></td></tr></table></figure>
-<h3 id="时间显示"><a href="#时间显示" class="headerlink" title="时间显示"></a>时间显示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//标准时间显示</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">ass</span></span>()&#123;</div><div class="line">    var timer =document.getElementById(<span class="string">"timer"</span>);</div><div class="line">    var time = new Date();</div><div class="line">    var year = time.getFullYear();</div><div class="line">    var month = time.getMonth();</div><div class="line">    var getday = time.getDate();</div><div class="line">    var hours = time.getHours();</div><div class="line">    var minutes = time.getMinutes();</div><div class="line">    var seconds = time.getSeconds();</div><div class="line">    var arr =year+<span class="string">"-"</span>+month+1+<span class="string">"-"</span>+getday+<span class="string">"&amp;nbsp;"</span>+hours+<span class="string">":"</span>+minutes+<span class="string">":"</span>+seconds;</div><div class="line">    timer.innerHTML=(arr);</div><div class="line">&#125;</div><div class="line"><span class="built_in">set</span>Interval(<span class="string">"ass()"</span>,100);</div><div class="line"></div><div class="line">//倒计时显示</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">asd</span></span>()&#123;</div><div class="line">    var endtime =new Date(<span class="string">"2017-1-27 11:59:59"</span>);  //截止时间</div><div class="line">    var begintime = new Date();  //标准时间</div><div class="line">    var t =endtime.getTime() - begintime.getTime();  //相减获取时间戳</div><div class="line">    var d=parseInt(t/1000/60/60/24);</div><div class="line">    var h=parseInt(t/1000/60/60%24);</div><div class="line">    var m=parseInt(t/1000/60%60);</div><div class="line">    var s=parseInt(t/1000%60);</div><div class="line">    document.getElementById(<span class="string">"t_d"</span>).innerHTML = d + <span class="string">"天"</span>;</div><div class="line">    document.getElementById(<span class="string">"t_h"</span>).innerHTML = h + <span class="string">"时"</span>;</div><div class="line">    document.getElementById(<span class="string">"t_m"</span>).innerHTML = m + <span class="string">"分"</span>;</div><div class="line">    document.getElementById(<span class="string">"t_s"</span>).innerHTML = s + <span class="string">"秒"</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">set</span>Interval(<span class="string">"asd()"</span>,100);</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/01/JSON/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/01/JavaScript/" itemprop="url">
-                  JavaScript收集
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
-              2017-03-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Javascript部分"><a href="#Javascript部分" class="headerlink" title="Javascript部分"></a>Javascript部分</h2><h3 id="Javascript实例"><a href="#Javascript实例" class="headerlink" title="Javascript实例"></a>Javascript实例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dom"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></div><div class="line">        <span class="comment">// 全局变量</span></div><div class="line">        <span class="keyword">var</span> a,_,a2,$;</div><div class="line">        <span class="keyword">var</span> π = <span class="number">3.141592653</span>;</div><div class="line">        <span class="built_in">console</span>.log(π); <span class="comment">//打印输出</span></div><div class="line">        <span class="keyword">var</span> 六 = <span class="string">"3乘以2"</span>; <span class="comment">//中文变量</span></div><div class="line">    </div><div class="line">        <span class="comment">//重复声明变量是无效的</span></div><div class="line">        <span class="keyword">var</span> op = <span class="number">1</span>;</div><div class="line">        <span class="keyword">var</span> op;</div><div class="line">    </div><div class="line">        <span class="comment">//没有用 var 声明的变量都是全局变量</span></div><div class="line">        af = <span class="number">10</span>;</div><div class="line">        <span class="built_in">console</span>.log(af);</div><div class="line">    </div><div class="line">        <span class="comment">// 函数</span></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">aa</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="comment">// 局部函数</span></div><div class="line">           <span class="keyword">var</span> ad = <span class="number">12</span>;</div><div class="line">           <span class="built_in">console</span>.log(ad);</div><div class="line">        &#125;</div><div class="line">        aa(); <span class="comment">//函数调用</span></div><div class="line">    </div><div class="line">        <span class="comment">// 这不是一个函数，所以 as 也是全局变量</span></div><div class="line">        <span class="keyword">if</span>(<span class="number">1</span>)&#123;</div><div class="line">            <span class="keyword">var</span> <span class="keyword">as</span> =<span class="number">13</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">as</span>);</div><div class="line">    </div><div class="line">    </div><div class="line">        <span class="comment">// 输出方式：</span></div><div class="line">        <span class="comment">//alert("对不起"); //弹框</span></div><div class="line">        <span class="comment">//在HTML里面的输出</span></div><div class="line">        <span class="keyword">var</span> dom = <span class="built_in">document</span>.getElementById(<span class="string">"dom"</span>);</div><div class="line">        dom.innerHTML = <span class="string">"&lt;h2&gt;html的内容&lt;/h2&gt;"</span>;</div><div class="line">        <span class="comment">//dom.innerText = "文本";</span></div><div class="line">    </div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"日志"</span>);  <span class="comment">//日志</span></div><div class="line">        <span class="built_in">console</span>.info(<span class="string">"信息"</span>); <span class="comment">//信息</span></div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">"警告"</span>); <span class="comment">//警告</span></div><div class="line">        <span class="built_in">console</span>.error(<span class="string">"错误"</span>); <span class="comment">//错误</span></div><div class="line">        </div><div class="line">        <span class="comment">//null undefined比较</span></div><div class="line">            <span class="keyword">var</span> q = <span class="literal">null</span>;</div><div class="line">            <span class="keyword">var</span> w = <span class="literal">undefined</span>;</div><div class="line">            <span class="keyword">if</span>(q == w)&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"真的"</span>);</div><div class="line">            &#125;</div><div class="line">        </div><div class="line">        <span class="comment">//判断一个值为什么类型</span></div><div class="line">        <span class="keyword">var</span> s = <span class="string">"f"</span>;<span class="comment">//字符串string</span></div><div class="line">        <span class="keyword">var</span> n = <span class="literal">null</span>;<span class="comment">//对象object</span></div><div class="line">        <span class="keyword">var</span> arr = [];<span class="comment">//对象object</span></div><div class="line">        <span class="keyword">var</span> d =&#123;&#125;;<span class="comment">//对象object</span></div><div class="line">        <span class="keyword">var</span> t =<span class="number">6</span>;<span class="comment">//数值number</span></div><div class="line">        <span class="keyword">var</span> y = <span class="literal">false</span>;<span class="comment">//布尔值boolean</span></div><div class="line">        <span class="keyword">var</span> u = <span class="literal">undefined</span>;<span class="comment">//undefined</span></div><div class="line">        <span class="keyword">var</span> i = <span class="function"><span class="keyword">function</span> <span class="title">ss</span>(<span class="params"></span>)</span>&#123;&#125;;<span class="comment">//undefined</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"数据类型:"</span>+<span class="keyword">typeof</span> n);</div><div class="line">        <span class="comment">//typeof 的用法</span></div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> jkj== <span class="string">"undefined"</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"未声明"</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="comment">//数据转换</span></div><div class="line">        <span class="comment">//Number</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">null</span>));<span class="comment">//强制转换结果：0</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">true</span>));<span class="comment">//转换结果：1</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>([]));<span class="comment">//转换结果：0</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>([<span class="string">"456"</span>]));<span class="comment">//转换结果为数字456</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">undefined</span>));<span class="comment">//转换结果：NaN</span></div><div class="line">        <span class="comment">//自动转换</span></div><div class="line">        <span class="built_in">console</span>.log(+<span class="string">"12345"</span>);   <span class="comment">//转换结果为数字12345(推荐)</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"14354sdafdf"</span>));<span class="comment">//转换结果为数字14354</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"855.5443"</span>));<span class="comment">//将字符串转换成整型，结果为:855</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">parseFloat</span>(<span class="string">"855.5443"</span>));<span class="comment">//将字符串转换成浮点数，结果为:855.5443</span></div><div class="line">    </div><div class="line">        <span class="comment">//String</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>(<span class="number">123</span>));<span class="comment">//转换结果为字符串123</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>([]));<span class="comment">//转换结果为空</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>(<span class="literal">null</span>));<span class="comment">//转换结果为null</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>(<span class="literal">undefined</span>));<span class="comment">//转换结果为undefined</span></div><div class="line">        <span class="comment">//自动转换</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="number">12345</span>+<span class="string">""</span>);<span class="comment">//转换结果为字符串"12345"（推荐）</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="number">12345</span>+[<span class="string">"543"</span>,<span class="string">"asd"</span>,<span class="string">"988"</span>]);<span class="comment">//转换结果为字符串"12345543,asd,988"</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"12345"</span>+<span class="literal">null</span>);<span class="comment">//转换结果为字符串"12345null"</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"12345"</span>+<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);<span class="comment">//转换结果为字符串"12345function()&#123;&#125;"</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="number">12345</span>+<span class="string">""</span>);</div><div class="line">        <span class="comment">//自动转换</span></div><div class="line">        <span class="comment">/*为假的值有：</div><div class="line">        false    0/-0    ""    NAN    undefined    null</div><div class="line">         */</span></div><div class="line">        <span class="keyword">if</span>(<span class="string">""</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"yesyes"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"nonono"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="string">"1"</span>+<span class="number">3</span>+<span class="number">5</span>; <span class="comment">//转换结果为字符串"135"</span></div><div class="line">        <span class="number">3</span>+<span class="number">5</span>+<span class="string">"1"</span>; <span class="comment">//转换结果为字符串"81"</span></div><div class="line">        <span class="keyword">var</span> kl = [<span class="number">1</span>,<span class="string">"a"</span>,];</div><div class="line">        <span class="keyword">var</span> ik = [<span class="number">3.14</span>];</div><div class="line">        <span class="keyword">var</span> ioo = kl+ik;<span class="comment">//转换结果为字符串"1,a3.14"</span></div><div class="line">        <span class="built_in">console</span>.log(ioo);</div><div class="line">            </div><div class="line">            <span class="comment">/*</div><div class="line">            二进制：0b</div><div class="line">            八进制：0</div><div class="line">            十进制：o</div><div class="line">            十六进制：0x</div><div class="line">            */</span></div><div class="line">            <span class="comment">//字符串拼接</span></div><div class="line">           <span class="keyword">var</span> yt = <span class="number">12</span>;</div><div class="line">           <span class="keyword">var</span> tu = <span class="string">"dadasd"</span>;</div><div class="line">           <span class="keyword">var</span> fd = <span class="number">12</span>+<span class="string">"dadasd"</span>;</div><div class="line">           <span class="built_in">console</span>.log(fd);</div><div class="line">           </div><div class="line">        <span class="comment">//反斜杠的用法</span></div><div class="line">        <span class="keyword">var</span> hg = <span class="string">'I\'m a student'</span>;</div><div class="line">        <span class="keyword">var</span> ed = <span class="string">"afadfgagagsdfgsafagdgrsysrhsd\</div><div class="line">     agagadgadsfhsdhdfhdrthth\</div><div class="line">     dsagsagdsgsdgsd"</span>;</div><div class="line">       <span class="built_in">console</span>.log(ed);</div><div class="line">       <span class="keyword">var</span> et = <span class="string">"afadfgagagsdfgsafagdgrsddddddd\nagagadgadsfhsdhdfggggg\ndsagsagdsgsdgsd"</span>;</div><div class="line">       <span class="built_in">console</span>.log(et);</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"\251"</span>);</div><div class="line">       </div><div class="line">       <span class="comment">//数组</span></div><div class="line">           <span class="keyword">var</span> arr =[<span class="string">"one"</span>,<span class="string">"two"</span>];</div><div class="line">           arr.push(<span class="string">"last"</span>);  <span class="comment">//数组最后位置放进一个元素</span></div><div class="line">           arr.unshift(<span class="string">"first"</span>);  <span class="comment">//数组第一个位置放进一个元素</span></div><div class="line">           arr.pop();  <span class="comment">//删除数组最后一个元素</span></div><div class="line">           arr.shift();  <span class="comment">//删除数组第一个元素</span></div><div class="line">          <span class="built_in">console</span>.log(arr);</div><div class="line">          </div><div class="line">       <span class="comment">//合并数组:concat</span></div><div class="line">           <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line">           <span class="keyword">var</span> b =[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line">           <span class="keyword">var</span> c =a.concat(b);</div><div class="line">           <span class="built_in">console</span>.log(c);</div><div class="line">       </div><div class="line">       <span class="comment">//将数组转换成字符串（省略逗号）:join</span></div><div class="line">       <span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">       a = a.join(<span class="string">""</span>);</div><div class="line">       <span class="built_in">console</span>.log(a);</div><div class="line">   </div><div class="line">       <span class="comment">//截取数组里面的元素:slice</span></div><div class="line">       <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</div><div class="line">       a = a.slice(<span class="number">1</span>,<span class="number">4</span>); <span class="comment">//截取数组为[2,3,4]</span></div><div class="line">       <span class="built_in">console</span>.log(a);</div><div class="line">   </div><div class="line">       <span class="comment">//将数组倒叙排列：reverse</span></div><div class="line">       <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</div><div class="line">       a = a.reverse();</div><div class="line">       <span class="built_in">console</span>.log(a);</div><div class="line">   </div><div class="line">       <span class="comment">//将数组由小到大排序：sort</span></div><div class="line">       <span class="keyword">var</span> r =[<span class="number">1</span>,<span class="number">8</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">10</span>];</div><div class="line">       <span class="keyword">var</span> a =r[<span class="number">0</span>];</div><div class="line">       <span class="keyword">var</span> b =r[<span class="number">1</span>];</div><div class="line">       <span class="keyword">var</span> c = r.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">           <span class="keyword">return</span> a-b;</div><div class="line">       &#125;)</div><div class="line">       <span class="built_in">console</span>.log(c);</div><div class="line">   </div><div class="line">       <span class="comment">//1.删除数组的元素；2.任意位置添加元素：splice</span></div><div class="line">       <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>];</div><div class="line">       <span class="keyword">var</span> b =a.splice(<span class="number">2</span>,<span class="number">1</span>,<span class="string">"hehe"</span>,<span class="number">66</span>); <span class="comment">//结果为[1, 3, "hehe", 66, 7]</span></div><div class="line">       <span class="built_in">console</span>.log(a);   </div><div class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/01/JavaScript/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/01/PHP/" itemprop="url">
-                  PHP相关的收集
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
-              2017-03-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="PHP部分"><a href="#PHP部分" class="headerlink" title="PHP部分"></a>PHP部分</h2><h3 id="PHP概念"><a href="#PHP概念" class="headerlink" title="PHP概念"></a>PHP概念</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">PHP是什么？</div><div class="line">    PHP 是一种服务器端脚本编程语言</div><div class="line">    PHP: person home page  个人主页</div><div class="line">    PHP: Hypertext Preprocessor 超文本预处理器</div><div class="line">    </div><div class="line">类c语言：</div><div class="line">    PHP 这门编程语言（系统） 是由C语言开发的</div><div class="line">    语法风格与c语言相似</div><div class="line"></div><div class="line">PHP的编程范式：</div><div class="line">    1.面向过程</div><div class="line">    2.面向对象</div><div class="line"></div><div class="line">LAMP架构(Xampp、Wamp、phpStudy)</div><div class="line">    Linux Apache Mysql PHP</div><div class="line">    PHP-study(web开发/运行环境集成软件包)</div><div class="line">            \---apache、nginx、iis (http server)</div><div class="line">            \---php (script engine)</div><div class="line">            \---mysql (DBMS)</div><div class="line">互联网Internet(广域网)</div><div class="line">IP地址端口</div><div class="line">IP 互联网协议</div><div class="line">http server 是超文本传输协议服务（器）</div><div class="line">这个服务器可以让可相连的电脑通过域名/IP(以及端口) 从http服务器上获得静态网页！</div><div class="line"></div><div class="line">HTTP 超文本传输协议的特点： 无状态/短连接</div><div class="line">     请求/响应 request/response</div><div class="line">     打开网站中的网页所经过的步骤</div><div class="line">     1.浏览器输入域名  =&gt;      DNS(Domain  Name Server)域名服务器解析 》获取到IP地址 》</div><div class="line">     根据IP地址访问互联网/局域网中的服务器</div><div class="line">     以上的访问实际上就是对服务器网页资源的请求</div><div class="line">     服务器（Http Server）获得这个请求后，对其用户的请求进行相应的处理，然后对其请求响应结果以网页或</div><div class="line">     其他资源形式返回给客户端</div><div class="line">     （用户代理-通指浏览器）</div><div class="line"></div><div class="line">嵌入在html的为多页面php程序</div><div class="line">多页面php程序的优势：</div><div class="line">    1.快、效率高</div><div class="line">    2.缺点：逻辑与页面紧偶合</div><div class="line">     </div><div class="line">一个字符串可以用 4 种方式表达：</div><div class="line">    单引号</div><div class="line">    双引号</div><div class="line">     heredoc 语法结构（相当于单引号）</div><div class="line">     nowdoc 语法结构（相当于双引号）</div><div class="line">     </div><div class="line">问题：</div><div class="line">数组为什么能放入不同的元素</div><div class="line">    1.因为数组里存放的是引用</div><div class="line">    在PHP中 <span class="string">""</span> 与<span class="string">''</span>的加载速度哪个更快？</div><div class="line">    1.单引号更快，双引号的功能更强大</div><div class="line">    &lt;?php</div><div class="line">        <span class="variable">$love</span> = <span class="string">"I love you!"</span>;</div><div class="line">        <span class="variable">$string1</span> = <span class="string">"慕课网,<span class="variable">$love</span>"</span>;</div><div class="line">        <span class="variable">$string2</span> = <span class="string">'慕课网,$love'</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string1</span>;//输出结果为：慕课网,I love you!</div><div class="line">        <span class="built_in">echo</span> <span class="string">"&lt;br /&gt;"</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string2</span>;//输出结果为：慕课网,<span class="variable">$love</span></div><div class="line">    ?&gt;</div><div class="line">     </div><div class="line">如何优化网页</div><div class="line">    1.图片的优化</div><div class="line">    2.代码的优化</div><div class="line">    3.预加载（选用）</div><div class="line">    </div><div class="line">空结构体占几个字节</div><div class="line">    1个字节</div><div class="line">string 最大可以达到多少？</div><div class="line">    2GB</div></pre></td></tr></table></figure>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/01/PHP/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -929,7 +734,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -962,7 +767,7 @@
           <h2 id="CSS布局"><a href="#CSS布局" class="headerlink" title="CSS布局"></a>CSS布局</h2><h3 id="CSS布局实例"><a href="#CSS布局实例" class="headerlink" title="CSS布局实例"></a>CSS布局实例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">/*布局*/</div><div class="line">.form&#123;</div><div class="line">    width: 500px;</div><div class="line">    height: 300px;</div><div class="line">    border:1px solid red;</div><div class="line">    position: absolute;</div><div class="line">    top: 50%;</div><div class="line">    left: 50%;</div><div class="line">    /*第一种水平垂直居中</div><div class="line">    margin-top:-150px;</div><div class="line">    margin-left:-250px;*/</div><div class="line">    /*第一种水平垂直居中*/</div><div class="line">    transform:translate(-50%,-50%);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/01/CSS/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -1025,7 +830,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
             <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
@@ -1069,7 +874,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获得内容：text()、html()</span></div><div class="line">$(<span class="string">".as"</span>).html(<span class="string">"jquery改变的html文本"</span>);</div><div class="line"><span class="comment">//获得value值</span></div><div class="line">$(<span class="string">"#ad"</span>).val(<span class="string">"获取value"</span>);</div><div class="line"><span class="comment">//获取属性：attr()</span></div><div class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">   <span class="keyword">var</span> a =$(<span class="string">"#af"</span>).attr(<span class="string">"href"</span>);</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//添加新的 HTML 内容</span></div><div class="line"><span class="comment">/*append() - 在被选元素的结尾插入内容</div><div class="line">prepend() - 在被选元素的开头插入内容</div><div class="line">after() - 在被选元素之后插入内容</div><div class="line">before() - 在被选元素之前插入内容*/</span></div><div class="line">$(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#con p"</span>).append(<span class="string">"&lt;i&gt;新添加的文本;&lt;/i&gt;"</span>);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"#btn2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#con li"</span>).append(<span class="string">"&lt;li&gt;新添加的文本;&lt;/li&gt;"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//删除元素/内容</span></div><div class="line"><span class="comment">/*</div><div class="line">remove() - 删除被选元素（及其子元素）</div><div class="line">empty() - 从被选元素中删除子元素*/</span></div><div class="line">$(<span class="string">"#btn3"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#div1"</span>).empty();</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//获取宽高</span></div><div class="line">$(<span class="string">"#div2"</span>).mouseover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a =$(<span class="string">"#div2"</span>).width();</div><div class="line">    <span class="keyword">var</span> b =$(<span class="string">"#div2"</span>).innerWidth();</div><div class="line">    $(<span class="string">"#div2"</span>).css(&#123;</div><div class="line">        <span class="string">"transition"</span>:<span class="string">"1s"</span>,</div><div class="line">        <span class="string">"transform"</span>:<span class="string">"scale(1.1)"</span></div><div class="line">    &#125;);</div><div class="line">    <span class="built_in">console</span>.log(a);</div><div class="line">    <span class="built_in">console</span>.log(b);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"#div2"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> n = $(<span class="string">"#div2"</span>).position().left;</div><div class="line">    <span class="built_in">console</span>.log(n);</div><div class="line">    $(<span class="string">"#div2"</span>).css(<span class="string">"left"</span>, n+<span class="number">5</span>+<span class="string">"px"</span>)</div><div class="line">&#125;,<span class="number">50</span>)</div><div class="line">&#125;);</div><div class="line"><span class="comment">//jQuery 操作 CSSl</span></div><div class="line"><span class="comment">/*</div><div class="line">addClass() - 向被选元素添加一个或多个类</div><div class="line">removeClass() - 从被选元素删除一个或多个类</div><div class="line">toggleClass() - 对被选元素进行添加/删除类的切换操作</div><div class="line">css() - 设置或返回样式属性*/</span></div><div class="line"></div><div class="line"><span class="comment">//jquery 过滤</span></div><div class="line"><span class="comment">//first() last()</span></div><div class="line"><span class="comment">// 和 eq() filter() not()</span></div><div class="line">$(<span class="string">"#btn4"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    $(<span class="string">"#change p"</span>).eq(<span class="number">0</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"yellow"</span>,<span class="string">"font-size"</span>:<span class="string">"30px"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;);</div><div class="line">    $(<span class="string">"#change p"</span>).filter(<span class="string">".intro"</span>).css(&#123;<span class="string">"background-color"</span>:<span class="string">"green"</span>,<span class="string">"font-size"</span>:<span class="string">"30px"</span>,<span class="string">"width"</span>:<span class="string">"300px"</span>&#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//遍历</span></div><div class="line"><span class="comment">//parent()上一级  parents()所有的上一级</span></div><div class="line"><span class="comment">// children()所有的下一级  find()指定的下一级</span></div><div class="line">$(<span class="string">".ancestors div"</span>).find(<span class="string">"li"</span>).css(&#123;<span class="string">"color"</span>:<span class="string">"red"</span>,<span class="string">"border"</span>:<span class="string">"2px solid red"</span>&#125;);</div><div class="line"><span class="comment">//同胞</span></div><div class="line"><span class="comment">//siblings()所有同胞元素  next()下一个元素(一个)  nextAll()后面的所有同胞</span></div><div class="line"><span class="comment">//prev()上一个元素（一个）  prevAll()前面的所有同胞</span></div><div class="line">$(<span class="string">"#div3 span"</span>).next().css(&#123;<span class="string">"color"</span>:<span class="string">"red"</span>,<span class="string">"border"</span>:<span class="string">"2px solid red"</span>&#125;);</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
             <a class="btn" href="/2017/03/01/Ajax/#more" rel="contents">
-              Read more &raquo;
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -1119,8 +924,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/01/MySQL/" itemprop="url">
-                  MySQL设计与管理
+                <a class="post-title-link" href="/2017/03/01/JSON/" itemprop="url">
+                  JSON相关
                 </a>
               
             
@@ -1132,8 +937,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2017-03-01T16:23:14+08:00" content="2017-03-01">
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
               2017-03-01
             </time>
           </span>
@@ -1162,98 +967,212 @@
 
       
         
-          <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><ul>
-<li>RDBMS：Relational Database Manage System（关系数据库管理系统）</li>
-<li>DBMS ：Database Manage System（数据库管理系统）</li>
-<li>DB ：DATABASE（数据库）</li>
-<li>DBA ：Database Administrator（数据库管理员）</li>
-</ul>
-<h3 id="一、下载mysql"><a href="#一、下载mysql" class="headerlink" title="一、下载mysql"></a>一、下载mysql</h3><p><a href="https://dev.mysql.com/downloads/mysql/">MySQL下载地址</a></p>
-<h3 id="二、导入SQL文件"><a href="#二、导入SQL文件" class="headerlink" title="二、导入SQL文件"></a>二、导入SQL文件</h3><ul>
-<li>登录mysql</li>
-<li>准备好sql文件，并记清SQL文件的地址</li>
-<li>导入sql文件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source c:/world.sql</div></pre></td></tr></table></figure>
-<h3 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h3><p>打开<code>mysql</code>的安装目录，复制一份<code>my-default.ini</code>,将其重命名为<code>my.ini</code>；</p>
-<p>打开<code>my.ini</code>文件，修改如以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">basedir = I:\webroot\mysql-5.7.17</div><div class="line">datadir = I:\webroot\mysql-5.7.17\data</div><div class="line">port = 3306</div></pre></td></tr></table></figure>
-<p>注意：上面的路径根据你的 <code>mysql</code>安装路径来决定。</p>
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>在<code>path</code>中输入<code>mysql</code>安装的目录文件中bin路径（以分号；隔开）。</p>
-<h4 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysqld -install</div></pre></td></tr></table></figure>
-<h4 id="打开mysql"><a href="#打开mysql" class="headerlink" title="打开mysql"></a>打开mysql</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net start mysql</div></pre></td></tr></table></figure>
-<h4 id="关闭mysql"><a href="#关闭mysql" class="headerlink" title="关闭mysql"></a>关闭mysql</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net stop mysql</div></pre></td></tr></table></figure>
-<h3 id="四、登录与退出"><a href="#四、登录与退出" class="headerlink" title="四、登录与退出"></a>四、登录与退出</h3><h4 id="登录mysql"><a href="#登录mysql" class="headerlink" title="登录mysql"></a>登录mysql</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div></pre></td></tr></table></figure>
-<h4 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">exit</div><div class="line">\q</div><div class="line">quit</div></pre></td></tr></table></figure>
-<h3 id="五、解决MySQL5-7忘记root密码的办法"><a href="#五、解决MySQL5-7忘记root密码的办法" class="headerlink" title="五、解决MySQL5.7忘记root密码的办法"></a>五、解决MySQL5.7忘记root密码的办法</h3><p>在DOS窗口下输入<code>net stop mysql</code><br>切换到mysql的bin目录下另开一个DOS窗口输入<code>mysqld --skip-grant-tables</code><br>不要关闭窗口，再开一个DOS窗口先登陆：<code>mysql -u root</code><br>输入：<code>SET PASSWORD FOR &#39;root&#39;@&#39;localhost&#39; = PASSWORD(&#39;newpass&#39;)</code></p>
-<h2 id="数据库相关的操作"><a href="#数据库相关的操作" class="headerlink" title="数据库相关的操作"></a>数据库相关的操作</h2><h3 id="数据库语法（语法）"><a href="#数据库语法（语法）" class="headerlink" title="数据库语法（语法）"></a>数据库语法（语法）</h3><p>查看数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">show databases;</div></pre></td></tr></table></figure>
-<p>创建一个数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create database  db_name;</div></pre></td></tr></table></figure>
-<p>删除一个数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">drop database bd_name;</div></pre></td></tr></table></figure>
-<p>使用数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">use db_name;</div></pre></td></tr></table></figure>
-<h3 id="数据表的相关操作（语法）"><a href="#数据表的相关操作（语法）" class="headerlink" title="数据表的相关操作（语法）"></a>数据表的相关操作（语法）</h3><p>创建表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create table book_version(id int,name varchar(20));</div></pre></td></tr></table></figure>
-<p>查看表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW TABLES;</div></pre></td></tr></table></figure>
-<p>查看表结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DESC table_name;</div></pre></td></tr></table></figure>
-<p>+——-+————-+——+—–+———+——-+<br>| Field | Type        | Null | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| id    | int(11)     | YES  |     | NULL    |       |<br>| name  | varchar(20) | YES  |     | NULL    |       |<br>| sex   | char(1)     | YES  |     | NULL    |       |<br>+——-+————-+——+—–+———+——-+</p>
-<ul>
-<li>Field ： 字段名<br>Type   ： 类型<br>Null ： 是否可以存储为NULL<br>Key ：是否为主键或外键<br>Default ：默认值<br>Extra ：附加信息，比如：AUTO_INCREATMENT（自增长）</li>
-</ul>
-<p>补充：</p>
-<ul>
-<li>主键： 唯一标识一条记录，不能有重复的，不允许为空；一张表中只能有一个</li>
-<li><p>外键：表的外键是另一表的主键, 外键可以有重复的, 可以是空值；<br>一个表可以有多个外键</p>
-<p><strong>查看表的详细信息</strong></p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SHOW CREATE TABLE `user\G`;</div></pre></td></tr></table></figure>
-<p>返回的结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">CREATE TABLE `user` (</div><div class="line">  `id` int(11) DEFAULT NULL,</div><div class="line">  `name` varchar(20) DEFAULT NULL,</div><div class="line">  `sex` char(1) DEFAULT NULL</div><div class="line">) ENGINE=MyISAM DEFAULT CHARSET=latin1</div></pre></td></tr></table></figure></p>
-<ul>
-<li>ENGINE： 存储引擎，支持的引擎有Myisam、InnoDB、DBD、Merory、Archive</li>
-<li>CHARSET： 设置字符集</li>
-</ul>
-<p><strong>Note</strong>：</p>
-<ul>
-<li>加上<code>\G</code>更容易查看详细信息</li>
-</ul>
-<p>修改数据表结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE tb_name modify column_name data_type;</div></pre></td></tr></table></figure>
-<p>将id修改成int(10) 修改指定字段的数据类型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER table `user` modify `id` int(10);</div></pre></td></tr></table></figure></p>
-<p>增加一个age字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` ADD `age` int(2);</div></pre></td></tr></table></figure></p>
-<p>将id设置成主键<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` ADD PRIMARY KEY (`id`);</div></pre></td></tr></table></figure></p>
-<p>将id设置成唯一字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` ADD UNIQUE (`id`);</div></pre></td></tr></table></figure></p>
-<p>修改表名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` RENAME `users`;</div></pre></td></tr></table></figure></p>
-<p>删除主键<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` DROP PRIMARY KEY;</div></pre></td></tr></table></figure></p>
-<p>删除字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` DROP `age`;</div></pre></td></tr></table></figure></p>
-<p>修改一个字段<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ALTER TABLE `user` CHANGE `age` `ages` int(2);</div></pre></td></tr></table></figure></p>
-<h3 id="数据表中数据的相关操作（语法）"><a href="#数据表中数据的相关操作（语法）" class="headerlink" title="数据表中数据的相关操作（语法）"></a>数据表中数据的相关操作（语法）</h3><h4 id="增-alsert-into-、删-deiete-、改-uptate-、查-select"><a href="#增-alsert-into-、删-deiete-、改-uptate-、查-select" class="headerlink" title="增(alsert into)、删(deiete)、改(uptate)、查(select)"></a>增(alsert into)、删(deiete)、改(uptate)、查(select)</h4><p>INSERT INTO 语句（增加）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)</div><div class="line"></div><div class="line">举例：插入新的一行：</div><div class="line">INSERT INTO Persons VALUES (&apos;Gates&apos;, &apos;Bill&apos;, &apos;Xuanwumen 10&apos;, &apos;Beijing&apos;)</div></pre></td></tr></table></figure></p>
-<p>Update 语句（修改）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值</div><div class="line"></div><div class="line">举例：修改地址（address），并添加城市名称（city）：</div><div class="line">UPDATE Person SET Address = &apos;Zhongshan 23&apos;, City = &apos;Nanjing&apos;</div><div class="line">WHERE LastName = &apos;Wilson&apos;</div></pre></td></tr></table></figure></p>
-<p>DELETE 语句（删除）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">DELETE FROM 表名称 WHERE 列名称 = 值</div><div class="line"></div><div class="line">举例：&quot;Wilson&quot; 会被删除：</div><div class="line">DELETE FROM Person WHERE LastName = &apos;Wilson&apos;</div></pre></td></tr></table></figure></p>
-<p>SELECT 语句（查询）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT 列名称 FROM 表名称</div><div class="line"></div><div class="line">举例：获取名为 &quot;LastName&quot; 和 &quot;FirstName&quot; 的列的内容（从名为 &quot;Persons&quot; 的数据库表）：</div><div class="line">SELECT LastName,FirstName FROM Persons</div></pre></td></tr></table></figure></p>
-<p>DISTINCT 语句（不重复显示）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT 列名称 FROM 表名称</div><div class="line"></div><div class="line">举例：从 &quot;Company&quot; 列中选取Orders表所有的值</div><div class="line">SELECT DISTINCT Company FROM Orders</div></pre></td></tr></table></figure></p>
-<p>WHERE 语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT 列名称 FROM 表名称 WHERE 列 运算符 值</div><div class="line"></div><div class="line">举例：选取居住在城市 &quot;Beijing&quot; 中的人</div><div class="line">SELECT * FROM Persons WHERE City=&apos;Beijing&apos;</div></pre></td></tr></table></figure></p>
-<p>AND 和 OR 运算符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">举例：使用 AND 来显示所有姓为 &quot;Carter&quot; 并且名为 &quot;Thomas&quot; 的人：</div><div class="line">SELECT * FROM Persons WHERE FirstName=&apos;Thomas&apos; AND LastName=&apos;Carter&apos;</div></pre></td></tr></table></figure></p>
-<p>ORDER BY 语句（排序）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">ORDER BY默认为升序ASC；降序加上：DESC</div><div class="line"></div><div class="line">举例：以字母顺序显示公司名称：</div><div class="line">SELECT Company FROM Orders ORDER BY Company</div></pre></td></tr></table></figure></p>
-<p>LIMIT 子句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">举例：2表示查询的位置，10表示条数</div><div class="line">SELECT * FROM `Orders` LIMIT 2, 10;</div></pre></td></tr></table></figure></p>
-<p>LIKE 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">LIKE 操作符用于在 WHERE 子句中搜索列。</div><div class="line"></div><div class="line">举例：从 &quot;Persons&quot; 表中选取居住在以 &quot;N&quot; 开始的城市里的人：</div><div class="line">SELECT * FROM Persons WHERE City LIKE &apos;N%&apos;</div></pre></td></tr></table></figure></p>
-<p>通配符（_、%、[ ]）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">通配符必须与 LIKE 运算符一起使用</div><div class="line"></div><div class="line">举例1：从 &quot;Persons&quot; 表中选取的这条记录的姓氏以 &quot;C&quot; 开头，然后是一个任意字符，然后是 &quot;r&quot;，</div><div class="line">然后是任意字符，然后是 &quot;er&quot;：</div><div class="line">SELECT * FROM Persons WHERE LastName LIKE &apos;C_r_er&apos;</div><div class="line"></div><div class="line">举例2：从上面的 &quot;Persons&quot; 表中选取居住的城市以 &quot;A&quot; 或 &quot;L&quot; 或 &quot;N&quot; 开头的人：</div><div class="line">SELECT * FROM Persons WHERE City LIKE &apos;[ALN]%&apos;</div></pre></td></tr></table></figure></p>
-<p>IN 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">IN 操作符可在 WHERE 子句中规定多个值。</div><div class="line"></div><div class="line">举例：从Persons表中选取姓氏为 Adams 和 Carter 的人：</div><div class="line">SELECT * FROM Persons WHERE LastName IN (&apos;Adams&apos;,&apos;Carter&apos;)</div></pre></td></tr></table></figure></p>
-<p>BETWEEN 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">BETWEEN ... AND 会选取两个值之间的数据范围。这些值可以是数值、文本或者日期。</div><div class="line">显示范围之外的可在BETWEEN前加用NOT 。</div><div class="line"></div><div class="line">举例：从Persons表中显示LastName列的 &quot;Adams&quot;（包括）和 &quot;Carter&quot;（不包括）之间的人：</div><div class="line">SELECT * FROM Persons WHERE LastName BETWEEN &apos;Adams&apos; AND &apos;Carter&apos;</div></pre></td></tr></table></figure></p>
-<p>AS(别名) 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">为列名称和表名称指定别名（Alias）。</div><div class="line"></div><div class="line">举例：从Persons表中将LastName，FirstName分别改名为Family，Name</div><div class="line">SELECT LastName AS Family, FirstName AS Name FROM Persons</div></pre></td></tr></table></figure></p>
-<p>UNION 操作符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">UNION 可以合并两个或多个 SELECT 语句的结果集。</div><div class="line"></div><div class="line">举例：列出所有在中国和美国的不同的雇员名：</div><div class="line">SELECT E_Name FROM Employees_China</div><div class="line">UNION</div><div class="line">SELECT E_Name FROM Employees_USA</div><div class="line"></div><div class="line">注：列出在中国和美国的所有的雇员可用 UNION ALL：</div></pre></td></tr></table></figure></p>
-<p>聚合函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">函数名称	       函数作用</div><div class="line">MIN(filed_name)	   求字段的最小值</div><div class="line">MAX(filed_name)	   求字段的最大值</div><div class="line">SUM(filed_name)	   求字段的求和</div><div class="line">AVG(filed_name)	   求字段的平均值</div><div class="line">COUNT(filed_name)  求该字段的行数</div><div class="line"></div><div class="line">举例：其他使用方法类同:</div><div class="line">SELECT MIN(OrderPrice) FROM `Orders`;</div></pre></td></tr></table></figure></p>
-<p>GROUP BY 子句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">用于结合聚合函数，根据一个或多个列对结果集进行分组。</div><div class="line"></div><div class="line">举例：查询每个科目的最高分</div><div class="line">SELECT `c_name`, max(`grade`) FROM `score` GROUP BY `c_name`;</div></pre></td></tr></table></figure></p>
-<p>HAVING 子句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">由于`WHERE`没办法与聚合函数一起使用，所有就增加了`HAVING`子句来对数据进行筛选。</div><div class="line"></div><div class="line">举例：查询每个科目大于90的分数</div><div class="line">SELECT `c_name`,AVG(`grade`) as avg_grade FROM `score` GROUP BY `c_name` HAVING avg_grade&gt;90;</div></pre></td></tr></table></figure></p>
-<h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">名称			描述								参数的意义</div><div class="line">char(n)			长度固定，最多可有255字符			n表示字符的个数</div><div class="line">varchar(n)		长度可变，最多可有65535个字符		~~</div><div class="line">tinytext		长度可变，最多可有255个字符</div><div class="line">text			长度可变，最多可有65535个字符</div><div class="line">mediumtext		长度可变，最多可有2^24 - 1个字符</div><div class="line">longtext		长度可变，最多可有2^32 - 1个字符</div><div class="line">date            日期</div><div class="line">datetime        日期时间</div><div class="line">time            时间</div><div class="line">timestamp       自动储存记录修改时间（最后修改时间）</div></pre></td></tr></table></figure>
-<h3 id="单位换算："><a href="#单位换算：" class="headerlink" title="单位换算："></a>单位换算：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">一个英文字母(不分大小写)占一个字节的空间;一个中文汉字占两个字节的空间,标点符号也一样。</div><div class="line">计算机中的CPU位数指的是CPU一次能处理的最大位数。例如32位计算机的CPU一次最多能处理</div><div class="line">32位数据</div><div class="line">1字节(Byte） = 8位(bit)</div><div class="line">1KB = 1024 Byte</div><div class="line">1M = 1024 KB</div><div class="line">1G = 1024 M</div><div class="line">1T = 1024 G</div><div class="line">1P = 1024 T</div></pre></td></tr></table></figure>
+          <h2 id="JSON对象相关笔记"><a href="#JSON对象相关笔记" class="headerlink" title="JSON对象相关笔记"></a>JSON对象相关笔记</h2><h3 id="什么是DOM"><a href="#什么是DOM" class="headerlink" title="什么是DOM"></a>什么是DOM</h3><h4 id="Document-Object-Model-简称DOM，中文翻译：文档对象模型"><a href="#Document-Object-Model-简称DOM，中文翻译：文档对象模型" class="headerlink" title="Document Object Model 简称DOM，中文翻译：文档对象模型"></a>Document Object Model 简称DOM，中文翻译：文档对象模型</h4><p>1.DOM的查询</p>
+<p>2.新建DOM节点</p>
+<p>3.删除DOM节点</p>
+<p>4.修改DOM节点<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.获取DOM节点</div><div class="line">1.1 通过id获取</div><div class="line"> var id =document.getElementById();</div><div class="line">1.2 通过标签获取</div><div class="line"> var p =document.getElementsByTagName();</div><div class="line">1.3 通过类名获取（慎用：不支持IE5/6/7/8）</div><div class="line"> var class =document.getElementsByClassName();</div><div class="line">1.4 querySelectorAll();</div></pre></td></tr></table></figure></p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>JSON：JavaScript 对象表示法（JavaScript Object Notation）。</p>
+<p>JSON 是存储和交换文本信息的语法。类似 XML。</p>
+<p>JSON 比 XML 更小、更快，更易解析。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.复合类型的值只能是数组对象，不能是函数、正则表达式对象、日期对象。</div><div class="line">2.简单类型的值只有四种：字符串、数值（必须以十进制表示）、布尔值和null(不能使用NaN，infinity,-infinity和undefined)。</div><div class="line">3.字符串必须使用双引号表示，不能使用单引号。</div><div class="line">4.对象的键名必须放在双引号里面。</div><div class="line">5.数组或对象最后一个成员的后面，不能加逗号。</div></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var a =&#123;"name":"周杰伦","age":36,"sex":"男","love":"girl","like":"music"&#125;; //JSON对象</div><div class="line">console.log(a);</div><div class="line">var arr =["name","age"];</div><div class="line">var s =JSON.stringify(a,arr);  //将指定JSON转换为字符串</div><div class="line">console.log(s);</div><div class="line">localStorage.setItem("a",s);  //存到localStorage</div><div class="line">//localStorage.clear()  //删除全部的localStorage</div><div class="line">localStorage.removeItem("key");  //删除指定的localStorage</div><div class="line">var shift = localStorage.getItem("a");  //从localStorage中取出数据</div><div class="line">var shift =JSON.parse(shift);  //将字符串转换为JSON</div><div class="line">console.log(shift);</div></pre></td></tr></table></figure>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">鼠标事件</div><div class="line">    1.点击事件</div><div class="line">        1.1 单击 onclick</div><div class="line">        1.2 双击 ondblclick</div><div class="line">        1.3 右键 oncontextmenu</div><div class="line">    2.滑动事件</div><div class="line">    3.滚轮事件</div><div class="line">键盘事件  onkeydown(键按下) onkeyup(键弹起)  onkeypress(按下并弹起)</div><div class="line">HTML事件</div><div class="line">window.onload=<span class="function"><span class="title">function</span></span>()&#123;&#125;</div></pre></td></tr></table></figure>
+<h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span>Interval(func/code,300);  重复执行，相同时间间隔后无限循环执行</div><div class="line"><span class="built_in">set</span>Timeout(func/code,300);   只执行一次</div></pre></td></tr></table></figure>
+<h3 id="时间显示"><a href="#时间显示" class="headerlink" title="时间显示"></a>时间显示</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">//标准时间显示</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">ass</span></span>()&#123;</div><div class="line">    var timer =document.getElementById(<span class="string">"timer"</span>);</div><div class="line">    var time = new Date();</div><div class="line">    var year = time.getFullYear();</div><div class="line">    var month = time.getMonth();</div><div class="line">    var getday = time.getDate();</div><div class="line">    var hours = time.getHours();</div><div class="line">    var minutes = time.getMinutes();</div><div class="line">    var seconds = time.getSeconds();</div><div class="line">    var arr =year+<span class="string">"-"</span>+month+1+<span class="string">"-"</span>+getday+<span class="string">"&amp;nbsp;"</span>+hours+<span class="string">":"</span>+minutes+<span class="string">":"</span>+seconds;</div><div class="line">    timer.innerHTML=(arr);</div><div class="line">&#125;</div><div class="line"><span class="built_in">set</span>Interval(<span class="string">"ass()"</span>,100);</div><div class="line"></div><div class="line">//倒计时显示</div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">asd</span></span>()&#123;</div><div class="line">    var endtime =new Date(<span class="string">"2017-1-27 11:59:59"</span>);  //截止时间</div><div class="line">    var begintime = new Date();  //标准时间</div><div class="line">    var t =endtime.getTime() - begintime.getTime();  //相减获取时间戳</div><div class="line">    var d=parseInt(t/1000/60/60/24);</div><div class="line">    var h=parseInt(t/1000/60/60%24);</div><div class="line">    var m=parseInt(t/1000/60%60);</div><div class="line">    var s=parseInt(t/1000%60);</div><div class="line">    document.getElementById(<span class="string">"t_d"</span>).innerHTML = d + <span class="string">"天"</span>;</div><div class="line">    document.getElementById(<span class="string">"t_h"</span>).innerHTML = h + <span class="string">"时"</span>;</div><div class="line">    document.getElementById(<span class="string">"t_m"</span>).innerHTML = m + <span class="string">"分"</span>;</div><div class="line">    document.getElementById(<span class="string">"t_s"</span>).innerHTML = s + <span class="string">"秒"</span>;</div><div class="line">&#125;</div><div class="line"><span class="built_in">set</span>Interval(<span class="string">"asd()"</span>,100);</div></pre></td></tr></table></figure>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2017/03/01/MySQL/#more" rel="contents">
-              Read more &raquo;
+            <a class="btn" href="/2017/03/01/JSON/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/01/JavaScript/" itemprop="url">
+                  JavaScript收集
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
+              2017-03-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Javascript部分"><a href="#Javascript部分" class="headerlink" title="Javascript部分"></a>Javascript部分</h2><h3 id="Javascript实例"><a href="#Javascript实例" class="headerlink" title="Javascript实例"></a>Javascript实例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"dom"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></div><div class="line">        <span class="comment">// 全局变量</span></div><div class="line">        <span class="keyword">var</span> a,_,a2,$;</div><div class="line">        <span class="keyword">var</span> π = <span class="number">3.141592653</span>;</div><div class="line">        <span class="built_in">console</span>.log(π); <span class="comment">//打印输出</span></div><div class="line">        <span class="keyword">var</span> 六 = <span class="string">"3乘以2"</span>; <span class="comment">//中文变量</span></div><div class="line">    </div><div class="line">        <span class="comment">//重复声明变量是无效的</span></div><div class="line">        <span class="keyword">var</span> op = <span class="number">1</span>;</div><div class="line">        <span class="keyword">var</span> op;</div><div class="line">    </div><div class="line">        <span class="comment">//没有用 var 声明的变量都是全局变量</span></div><div class="line">        af = <span class="number">10</span>;</div><div class="line">        <span class="built_in">console</span>.log(af);</div><div class="line">    </div><div class="line">        <span class="comment">// 函数</span></div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">aa</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="comment">// 局部函数</span></div><div class="line">           <span class="keyword">var</span> ad = <span class="number">12</span>;</div><div class="line">           <span class="built_in">console</span>.log(ad);</div><div class="line">        &#125;</div><div class="line">        aa(); <span class="comment">//函数调用</span></div><div class="line">    </div><div class="line">        <span class="comment">// 这不是一个函数，所以 as 也是全局变量</span></div><div class="line">        <span class="keyword">if</span>(<span class="number">1</span>)&#123;</div><div class="line">            <span class="keyword">var</span> <span class="keyword">as</span> =<span class="number">13</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">as</span>);</div><div class="line">    </div><div class="line">    </div><div class="line">        <span class="comment">// 输出方式：</span></div><div class="line">        <span class="comment">//alert("对不起"); //弹框</span></div><div class="line">        <span class="comment">//在HTML里面的输出</span></div><div class="line">        <span class="keyword">var</span> dom = <span class="built_in">document</span>.getElementById(<span class="string">"dom"</span>);</div><div class="line">        dom.innerHTML = <span class="string">"&lt;h2&gt;html的内容&lt;/h2&gt;"</span>;</div><div class="line">        <span class="comment">//dom.innerText = "文本";</span></div><div class="line">    </div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"日志"</span>);  <span class="comment">//日志</span></div><div class="line">        <span class="built_in">console</span>.info(<span class="string">"信息"</span>); <span class="comment">//信息</span></div><div class="line">        <span class="built_in">console</span>.warn(<span class="string">"警告"</span>); <span class="comment">//警告</span></div><div class="line">        <span class="built_in">console</span>.error(<span class="string">"错误"</span>); <span class="comment">//错误</span></div><div class="line">        </div><div class="line">        <span class="comment">//null undefined比较</span></div><div class="line">            <span class="keyword">var</span> q = <span class="literal">null</span>;</div><div class="line">            <span class="keyword">var</span> w = <span class="literal">undefined</span>;</div><div class="line">            <span class="keyword">if</span>(q == w)&#123;</div><div class="line">                <span class="built_in">console</span>.log(<span class="string">"真的"</span>);</div><div class="line">            &#125;</div><div class="line">        </div><div class="line">        <span class="comment">//判断一个值为什么类型</span></div><div class="line">        <span class="keyword">var</span> s = <span class="string">"f"</span>;<span class="comment">//字符串string</span></div><div class="line">        <span class="keyword">var</span> n = <span class="literal">null</span>;<span class="comment">//对象object</span></div><div class="line">        <span class="keyword">var</span> arr = [];<span class="comment">//对象object</span></div><div class="line">        <span class="keyword">var</span> d =&#123;&#125;;<span class="comment">//对象object</span></div><div class="line">        <span class="keyword">var</span> t =<span class="number">6</span>;<span class="comment">//数值number</span></div><div class="line">        <span class="keyword">var</span> y = <span class="literal">false</span>;<span class="comment">//布尔值boolean</span></div><div class="line">        <span class="keyword">var</span> u = <span class="literal">undefined</span>;<span class="comment">//undefined</span></div><div class="line">        <span class="keyword">var</span> i = <span class="function"><span class="keyword">function</span> <span class="title">ss</span>(<span class="params"></span>)</span>&#123;&#125;;<span class="comment">//undefined</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"数据类型:"</span>+<span class="keyword">typeof</span> n);</div><div class="line">        <span class="comment">//typeof 的用法</span></div><div class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> jkj== <span class="string">"undefined"</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"未声明"</span>);</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="comment">//数据转换</span></div><div class="line">        <span class="comment">//Number</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">null</span>));<span class="comment">//强制转换结果：0</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">true</span>));<span class="comment">//转换结果：1</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>([]));<span class="comment">//转换结果：0</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>([<span class="string">"456"</span>]));<span class="comment">//转换结果为数字456</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">undefined</span>));<span class="comment">//转换结果：NaN</span></div><div class="line">        <span class="comment">//自动转换</span></div><div class="line">        <span class="built_in">console</span>.log(+<span class="string">"12345"</span>);   <span class="comment">//转换结果为数字12345(推荐)</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"14354sdafdf"</span>));<span class="comment">//转换结果为数字14354</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"855.5443"</span>));<span class="comment">//将字符串转换成整型，结果为:855</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">parseFloat</span>(<span class="string">"855.5443"</span>));<span class="comment">//将字符串转换成浮点数，结果为:855.5443</span></div><div class="line">    </div><div class="line">        <span class="comment">//String</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>(<span class="number">123</span>));<span class="comment">//转换结果为字符串123</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>([]));<span class="comment">//转换结果为空</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>(<span class="literal">null</span>));<span class="comment">//转换结果为null</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="built_in">String</span>(<span class="literal">undefined</span>));<span class="comment">//转换结果为undefined</span></div><div class="line">        <span class="comment">//自动转换</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="number">12345</span>+<span class="string">""</span>);<span class="comment">//转换结果为字符串"12345"（推荐）</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="number">12345</span>+[<span class="string">"543"</span>,<span class="string">"asd"</span>,<span class="string">"988"</span>]);<span class="comment">//转换结果为字符串"12345543,asd,988"</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"12345"</span>+<span class="literal">null</span>);<span class="comment">//转换结果为字符串"12345null"</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"12345"</span>+<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);<span class="comment">//转换结果为字符串"12345function()&#123;&#125;"</span></div><div class="line">        <span class="built_in">console</span>.log(<span class="number">12345</span>+<span class="string">""</span>);</div><div class="line">        <span class="comment">//自动转换</span></div><div class="line">        <span class="comment">/*为假的值有：</div><div class="line">        false    0/-0    ""    NAN    undefined    null</div><div class="line">         */</span></div><div class="line">        <span class="keyword">if</span>(<span class="string">""</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"yesyes"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"nonono"</span>);</div><div class="line">        &#125;</div><div class="line">        <span class="string">"1"</span>+<span class="number">3</span>+<span class="number">5</span>; <span class="comment">//转换结果为字符串"135"</span></div><div class="line">        <span class="number">3</span>+<span class="number">5</span>+<span class="string">"1"</span>; <span class="comment">//转换结果为字符串"81"</span></div><div class="line">        <span class="keyword">var</span> kl = [<span class="number">1</span>,<span class="string">"a"</span>,];</div><div class="line">        <span class="keyword">var</span> ik = [<span class="number">3.14</span>];</div><div class="line">        <span class="keyword">var</span> ioo = kl+ik;<span class="comment">//转换结果为字符串"1,a3.14"</span></div><div class="line">        <span class="built_in">console</span>.log(ioo);</div><div class="line">            </div><div class="line">            <span class="comment">/*</div><div class="line">            二进制：0b</div><div class="line">            八进制：0</div><div class="line">            十进制：o</div><div class="line">            十六进制：0x</div><div class="line">            */</span></div><div class="line">            <span class="comment">//字符串拼接</span></div><div class="line">           <span class="keyword">var</span> yt = <span class="number">12</span>;</div><div class="line">           <span class="keyword">var</span> tu = <span class="string">"dadasd"</span>;</div><div class="line">           <span class="keyword">var</span> fd = <span class="number">12</span>+<span class="string">"dadasd"</span>;</div><div class="line">           <span class="built_in">console</span>.log(fd);</div><div class="line">           </div><div class="line">        <span class="comment">//反斜杠的用法</span></div><div class="line">        <span class="keyword">var</span> hg = <span class="string">'I\'m a student'</span>;</div><div class="line">        <span class="keyword">var</span> ed = <span class="string">"afadfgagagsdfgsafagdgrsysrhsd\</div><div class="line">     agagadgadsfhsdhdfhdrthth\</div><div class="line">     dsagsagdsgsdgsd"</span>;</div><div class="line">       <span class="built_in">console</span>.log(ed);</div><div class="line">       <span class="keyword">var</span> et = <span class="string">"afadfgagagsdfgsafagdgrsddddddd\nagagadgadsfhsdhdfggggg\ndsagsagdsgsdgsd"</span>;</div><div class="line">       <span class="built_in">console</span>.log(et);</div><div class="line">       <span class="built_in">console</span>.log(<span class="string">"\251"</span>);</div><div class="line">       </div><div class="line">       <span class="comment">//数组</span></div><div class="line">           <span class="keyword">var</span> arr =[<span class="string">"one"</span>,<span class="string">"two"</span>];</div><div class="line">           arr.push(<span class="string">"last"</span>);  <span class="comment">//数组最后位置放进一个元素</span></div><div class="line">           arr.unshift(<span class="string">"first"</span>);  <span class="comment">//数组第一个位置放进一个元素</span></div><div class="line">           arr.pop();  <span class="comment">//删除数组最后一个元素</span></div><div class="line">           arr.shift();  <span class="comment">//删除数组第一个元素</span></div><div class="line">          <span class="built_in">console</span>.log(arr);</div><div class="line">          </div><div class="line">       <span class="comment">//合并数组:concat</span></div><div class="line">           <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line">           <span class="keyword">var</span> b =[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];</div><div class="line">           <span class="keyword">var</span> c =a.concat(b);</div><div class="line">           <span class="built_in">console</span>.log(c);</div><div class="line">       </div><div class="line">       <span class="comment">//将数组转换成字符串（省略逗号）:join</span></div><div class="line">       <span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]</div><div class="line">       a = a.join(<span class="string">""</span>);</div><div class="line">       <span class="built_in">console</span>.log(a);</div><div class="line">   </div><div class="line">       <span class="comment">//截取数组里面的元素:slice</span></div><div class="line">       <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</div><div class="line">       a = a.slice(<span class="number">1</span>,<span class="number">4</span>); <span class="comment">//截取数组为[2,3,4]</span></div><div class="line">       <span class="built_in">console</span>.log(a);</div><div class="line">   </div><div class="line">       <span class="comment">//将数组倒叙排列：reverse</span></div><div class="line">       <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</div><div class="line">       a = a.reverse();</div><div class="line">       <span class="built_in">console</span>.log(a);</div><div class="line">   </div><div class="line">       <span class="comment">//将数组由小到大排序：sort</span></div><div class="line">       <span class="keyword">var</span> r =[<span class="number">1</span>,<span class="number">8</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">10</span>];</div><div class="line">       <span class="keyword">var</span> a =r[<span class="number">0</span>];</div><div class="line">       <span class="keyword">var</span> b =r[<span class="number">1</span>];</div><div class="line">       <span class="keyword">var</span> c = r.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</div><div class="line">           <span class="keyword">return</span> a-b;</div><div class="line">       &#125;)</div><div class="line">       <span class="built_in">console</span>.log(c);</div><div class="line">   </div><div class="line">       <span class="comment">//1.删除数组的元素；2.任意位置添加元素：splice</span></div><div class="line">       <span class="keyword">var</span> a =[<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>];</div><div class="line">       <span class="keyword">var</span> b =a.splice(<span class="number">2</span>,<span class="number">1</span>,<span class="string">"hehe"</span>,<span class="number">66</span>); <span class="comment">//结果为[1, 3, "hehe", 66, 7]</span></div><div class="line">       <span class="built_in">console</span>.log(a);   </div><div class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/01/JavaScript/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/01/PHP/" itemprop="url">
+                  PHP相关的收集
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <time itemprop="dateCreated" datetime="2017-03-01T18:32:47+08:00" content="2017-03-01">
+              2017-03-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="PHP部分"><a href="#PHP部分" class="headerlink" title="PHP部分"></a>PHP部分</h2><h3 id="PHP概念"><a href="#PHP概念" class="headerlink" title="PHP概念"></a>PHP概念</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">PHP是什么？</div><div class="line">    PHP 是一种服务器端脚本编程语言</div><div class="line">    PHP: person home page  个人主页</div><div class="line">    PHP: Hypertext Preprocessor 超文本预处理器</div><div class="line">    </div><div class="line">类c语言：</div><div class="line">    PHP 这门编程语言（系统） 是由C语言开发的</div><div class="line">    语法风格与c语言相似</div><div class="line"></div><div class="line">PHP的编程范式：</div><div class="line">    1.面向过程</div><div class="line">    2.面向对象</div><div class="line"></div><div class="line">LAMP架构(Xampp、Wamp、phpStudy)</div><div class="line">    Linux Apache Mysql PHP</div><div class="line">    PHP-study(web开发/运行环境集成软件包)</div><div class="line">            \---apache、nginx、iis (http server)</div><div class="line">            \---php (script engine)</div><div class="line">            \---mysql (DBMS)</div><div class="line">互联网Internet(广域网)</div><div class="line">IP地址端口</div><div class="line">IP 互联网协议</div><div class="line">http server 是超文本传输协议服务（器）</div><div class="line">这个服务器可以让可相连的电脑通过域名/IP(以及端口) 从http服务器上获得静态网页！</div><div class="line"></div><div class="line">HTTP 超文本传输协议的特点： 无状态/短连接</div><div class="line">     请求/响应 request/response</div><div class="line">     打开网站中的网页所经过的步骤</div><div class="line">     1.浏览器输入域名  =&gt;      DNS(Domain  Name Server)域名服务器解析 》获取到IP地址 》</div><div class="line">     根据IP地址访问互联网/局域网中的服务器</div><div class="line">     以上的访问实际上就是对服务器网页资源的请求</div><div class="line">     服务器（Http Server）获得这个请求后，对其用户的请求进行相应的处理，然后对其请求响应结果以网页或</div><div class="line">     其他资源形式返回给客户端</div><div class="line">     （用户代理-通指浏览器）</div><div class="line"></div><div class="line">嵌入在html的为多页面php程序</div><div class="line">多页面php程序的优势：</div><div class="line">    1.快、效率高</div><div class="line">    2.缺点：逻辑与页面紧偶合</div><div class="line">     </div><div class="line">一个字符串可以用 4 种方式表达：</div><div class="line">    单引号</div><div class="line">    双引号</div><div class="line">     heredoc 语法结构（相当于单引号）</div><div class="line">     nowdoc 语法结构（相当于双引号）</div><div class="line">     </div><div class="line">问题：</div><div class="line">数组为什么能放入不同的元素</div><div class="line">    1.因为数组里存放的是引用</div><div class="line">    在PHP中 <span class="string">""</span> 与<span class="string">''</span>的加载速度哪个更快？</div><div class="line">    1.单引号更快，双引号的功能更强大</div><div class="line">    &lt;?php</div><div class="line">        <span class="variable">$love</span> = <span class="string">"I love you!"</span>;</div><div class="line">        <span class="variable">$string1</span> = <span class="string">"慕课网,<span class="variable">$love</span>"</span>;</div><div class="line">        <span class="variable">$string2</span> = <span class="string">'慕课网,$love'</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string1</span>;//输出结果为：慕课网,I love you!</div><div class="line">        <span class="built_in">echo</span> <span class="string">"&lt;br /&gt;"</span>;</div><div class="line">        <span class="built_in">echo</span> <span class="variable">$string2</span>;//输出结果为：慕课网,<span class="variable">$love</span></div><div class="line">    ?&gt;</div><div class="line">     </div><div class="line">如何优化网页</div><div class="line">    1.图片的优化</div><div class="line">    2.代码的优化</div><div class="line">    3.预加载（选用）</div><div class="line">    </div><div class="line">空结构体占几个字节</div><div class="line">    1个字节</div><div class="line">string 最大可以达到多少？</div><div class="line">    2GB</div></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/03/01/PHP/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
         
@@ -1327,8 +1246,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">Artikel</span>
             </a>
           </div>
 
@@ -1375,7 +1294,7 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
